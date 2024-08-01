@@ -7,6 +7,7 @@ import FooterUtils from "./components/footer/FooterUtils";
 import Loader from "./components/common/Loader";
 import Home from "./components/pages/Home";
 
+
 function App() {
   return (
     <div className="text-center">
@@ -14,6 +15,7 @@ function App() {
       <HeaderMobile />
       <HeaderWindow />
       <Home></Home>
+  
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
