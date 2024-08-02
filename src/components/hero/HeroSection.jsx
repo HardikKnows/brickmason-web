@@ -1,34 +1,16 @@
 import React from "react";
-import sliderinfo from "../../sliderinfo";
-import CreateSlider from "../common/createSlider";
-import { Carousel } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';  
+import { Carousel} from "react-bootstrap";
 function HeroSection() {  
   
   return  (  
-    <Carousel className=" overflow-hidden relative max-h-96 lg:max-h-80  ">
-        {sliderinfo.map(CreateSlider)}
-    </Carousel>
-    
-  );
-}
-
-
-
-
-
-
-
-
-
-
-
-  {/* <div className='   '>  
-    <Carousel className=" overflow-hidden relative max-h-96 lg:max-h-80  " >  
-  <Carousel.Item>  */}
+<div className='   '>  
+    <Carousel className=" overflow-hidden relative max-h-[400px] lg:max-h-[350px]  ">  
+  <Carousel.Item> 
     {/* this is for background image*/}
- {/* <div className="carousel-image bg-img-1 d-block w-full animate-zoomin" > </div>
+ <div className="bg-[length:500px_400px] sm:bg-[length:100%_400px] lg:bg-[length:100%_350px] h-screen   bg-img-1 d-block w-full animate-zoomin"></div>
     <Carousel.Caption className="w-full absolute top-0 !text-left ">
-    <div className="slider-content  absolute left-[-12%] top-16">
+                    <div className="slider-content  absolute left-[-12%] top-16">
                         <div className="dl-caption medium">
                             <div className="inner-layer">
                                 <div><p className="  !workSans text-Rwhite one animate fadeRight text-xs   " >Resedential</p></div>
@@ -60,9 +42,9 @@ function HeroSection() {
                     </div>
     </Carousel.Caption>  
   </Carousel.Item>  
-  <Carousel.Item>  */}
+  <Carousel.Item>  
     {/* this is for background image*/}
- {/*  <div className="carousel-image bg-img-2 d-block w-full animate-zoomin" > </div>
+  <div className="bg-[length:500px_400px] sm:bg-[length:100%_400px] lg:bg-[length:100%_350px] h-screen  bg-img-2 d-block w-full animate-zoomin" > </div>
   
     <Carousel.Caption className=" absolute top-0 text-center flex justify-center content-center ">  
     <div className="slider-content absolute  top-16">
@@ -97,9 +79,9 @@ function HeroSection() {
                     </div>
     </Carousel.Caption>  
   </Carousel.Item>  
-<Carousel.Item>   */}
+<Carousel.Item>
     {/* this is for background image*/}
- {/* <div className="carousel-image bg-img-3 d-block w-full animate-zoomin" > </div>
+<div className="bg-[length:500px_400px] sm:bg-[length:100%_400px] lg:bg-[length:100%_350px] h-screen   bg-img-3 d-block w-full animate-zoomin" > </div>
   
     <Carousel.Caption className=" absolute  top-0 !text-right w-64 sm:w-[100%]">  
     <div className="slider-content absolute left-[-20%] top-16 sm:absolute  sm:right-[20%]">
@@ -136,7 +118,9 @@ function HeroSection() {
   </Carousel.Item>  
 </Carousel>  
 </div>  
-  */}
+
+);
+}
    
 
 export default HeroSection;
