@@ -40,9 +40,7 @@
     transform: rotate(360deg);
   }
 }
-.sliderImg {
-  
-}
+
 .workSans {
             font-family: "Work Sans", sans-serif;
             font-optical-sizing: auto;
@@ -91,11 +89,83 @@
     -moz-animation-delay: 3.5s;  
     animation-delay: 3.5s; 
    }
+  
+   .delayInAnimation4s{
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;  
+    animation-delay: 4s;
+
+
+   }
+   .delayInAnimation5s{
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;  
+    animation-delay: 5s;
+   }
+   .delayInAnimation8s{
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;  
+    animation-delay: 8s; 
+
+   }
+   .delayInAnimation9s{
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;  
+    animation-delay: 9s;
+   }
+   .delayInAnimation12s{
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;  
+    animation-delay: 12s; 
+
+   }
+   .delayInAnimation13s{
+    -webkit-animation-delay: 13s;
+    -moz-animation-delay: 13s;  
+    animation-delay: 13s;
+   }
+   .delayInAnimation16s{
+    -webkit-animation-delay: 16s;
+    -moz-animation-delay: 16s;  
+    animation-delay: 16s;
+
+   }
+   .delayInAnimation17s{
+    -webkit-animation-delay: 17s;
+    -moz-animation-delay: 17s;  
+    animation-delay: 17s;
+   }
+   .delayInAnimation20s{
+    -webkit-animation-delay: 20s;
+    -moz-animation-delay: 20s;  
+    animation-delay: 20s; 
+
+   }
+   .delayInAnimation21s{
+    -webkit-animation-delay: 21s;
+    -moz-animation-delay: 21s;  
+    animation-delay: 21s;
+   }
+   .delayInAnimation24s{
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;  
+    animation-delay: 24s;
+   }
+   .delayInAnimation25s{
+    -webkit-animation-delay: 25s;
+    -moz-animation-delay: 25s;  
+    animation-delay: 25s;
+   }
+   
+   
+
 .animate {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     animation-fill-mode: both;
     -webkit-animation-fill-mode: both;
+   
+    
 }
 .bg-img-1 {
   background-image: url('./assets/slider-1.jpg');
@@ -117,6 +187,162 @@
   left: -12%;
   
 }
+.turnOn {
+
+  animation-name: turnOn;
+  animation-fill-mode: both;
+
+}
+
+/* The animation code */
+
+@keyframes turnOn {
+    from {background-color:transparent;}
+    to {background-color:black ;}
+    from {color: #00000088;}
+    to {color: white;}
+  }
+  @-webkit-keyframes turnOn {
+    from {background-color:transparent;}
+    to {background-color:black ;}
+    from {color: #00000088;}
+    to {color: white;}
+  }
+  
+  /* The class to apply the animation to */
+
+  /* The animation code */
+
+@keyframes noneToBlock {
+    from {display: none;}
+    to {display: block !important;}
+  }
+  @-webkit-keyframes noneToBlock {
+    from {display: none;}
+    to {display: block !important;}
+  }
+ /* The class to apply the animation to */
+  .noneToBlock {
+    -webkit-animation-name: noneToBlock;
+    animation-name: noneToBlock;
+   
+  }
+  .noneToBlock4s {
+    -webkit-animation-name: noneToBlock;
+    animation-name: noneToBlock;
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;  
+    animation-delay: 4s;
+   
+  }
+  .noneToBlock8s {
+    -webkit-animation-name: noneToBlock;
+    animation-name: noneToBlock;
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;  
+    animation-delay: 8s;
+   
+  }
+  .noneToBlock12s {
+    -webkit-animation-name: noneToBlock;
+    animation-name: noneToBlock;
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;  
+    animation-delay: 12s;
+   
+  }
+  .noneToBlock16s {
+    -webkit-animation-name: noneToBlock;
+    animation-name: noneToBlock;
+    -webkit-animation-delay: 16s;
+    -moz-animation-delay: 16s;  
+    animation-delay: 16s;
+   
+  }
+  .noneToBlock20s {
+    -webkit-animation-name: noneToBlock;
+    animation-name: noneToBlock;
+    -webkit-animation-delay: 20s;
+    -moz-animation-delay: 20s;  
+    animation-delay: 20s;
+   
+  }
+  @keyframes blockToNone  {
+    from {
+      display: block;
+    opacity: 1;
+  }
+    to {display: none;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes blockToNone  {
+    from {display: block;}
+    to {display: none;}
+  }
+ /* The class to apply the animation to */
+ .blockToNone {
+  -webkit-animation-name: blockToNone ;
+  animation-name: blockToNone ;
+ }
+  .blockToNone4s {
+    -webkit-animation-name: blockToNone ;
+    animation-name: blockToNone ;
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;  
+    animation-delay: 4s;
+   
+  }
+  .blockToNone8s {
+    -webkit-animation-name: blockToNone ;
+    animation-name: blockToNone ;
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;  
+    animation-delay: 8s;
+   
+  }
+  .blockToNone12s {
+    -webkit-animation-name: blockToNone ;
+    animation-name: blockToNone ;
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;  
+    animation-delay: 12s;
+   
+  }
+  .blockToNone16s {
+    -webkit-animation-name: blockToNone ;
+    animation-name: blockToNone ;
+    -webkit-animation-delay: 16s;
+    -moz-animation-delay: 16s;  
+    animation-delay: 16s;
+   
+  }
+
+.blockToNone20s {
+  -webkit-animation-name: blockToNone ;
+  animation-name: blockToNone ;
+  -webkit-animation-delay: 20s;
+  -moz-animation-delay: 20s;  
+  animation-delay: 20s;
+ 
+}
+.blockToNone24s {
+  -webkit-animation-name: blockToNone ;
+  animation-name: blockToNone ;
+  -webkit-animation-delay: 24s;
+  -moz-animation-delay: 24s;  
+  animation-delay: 24s;
+ 
+}
+  .remove-animation {
+    animation: none 4s !important;
+  }
+  .repeatAnimation {
+      animation: turnOn 50s -25s linear infinite;
+
+  }
+
+  
 @-webkit-keyframes fadeUp {
     from{
         opacity: 0;
@@ -239,21 +465,6 @@
                 }
             
         
-    
-
-/*@keyframes fadeInRight {
-    from{
-        opacity: 0;
-        transform: translate3d(100px,0,0);
-    }
-    to{
-        opacity: 1;
-        transform: none;
-    }
-}
-.fadeInRight{
-    animation-name: fadeInRight;
-} */
 
 @keyframes zoom{
     from{

@@ -21,9 +21,11 @@ module.exports = {
       colors: {
         'Rwhite': '#FFFFFFCC',
         'orangebrick': '#ff7607',
-        'lightbrownc' : '#fae0bf98'
-
-      },
+        'lightbrownc' : '#fae0bf98',
+        'blackHW': '#263a4f',
+        'borderHW': '#00000088',
+        'borderHW2': '#DA8301',
+       },
       // that is animation class
       animation: {
         fade: 'fadeOut 5s ease-in-out',
@@ -41,6 +43,12 @@ module.exports = {
           '100%': {transform: theme('1.5,1.5')}
         }
       }),
+      screens: {
+        'xxsm': '380px',
+      
+  
+        'xsm': '420px',
+      },
     },
   },
   safelist: ['animate-[fade-in-right_1s_ease-in-out]', 'animate-[fade-in-down_1s_ease-in-out]'],
