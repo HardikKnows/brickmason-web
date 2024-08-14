@@ -32,7 +32,7 @@ function OurServices() {
         </div>
           
           <h5 class="my-2">New Build Homes</h5>
-          <p class="m-0 text-secondary source-sans text-[14px]"> We can provide a turnkey package to construct a new build home. We are happy working closely with clients and architects to form a robust, well-informed team to move the project forwards with no surprises.</p>
+          <p class="m-0 text-secondary source-sans text-[14px] !font-normal"> We can provide a turnkey package to construct a new build home. We are happy working closely with clients and architects to form a robust, well-informed team to move the project forwards with no surprises.</p>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
@@ -42,7 +42,7 @@ function OurServices() {
         </div>
 
           <h5 class="my-2">House Extensions</h5>
-          <p class="m-0 text-secondary source-sans text-[14px]">Extending your home can often be a less costly and stressful option than moving to a new property. You can take the opportunity to change the layout and make the building to work better for you. We will guide you every step of the way with your house extension. If required we know some great Architects who can help design the space, apply for planning permission and produce detailed plans.</p>
+          <p class="m-0 text-secondary source-sans text-[14px] !font-normal"> Extending your home can often be a less costly and stressful option than moving to a new property. You can take the opportunity to change the layout and make the building to work better for you. We will guide you every step of the way with your house extension. If required we know some great Architects who can help design the space, apply for planning permission and produce detailed plans.</p>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
@@ -51,7 +51,7 @@ function OurServices() {
        <img src={spinnerIcon}/>
         </div>
           <h5 class="my-2">House Renovation</h5>
-          <p class="m-0 text-secondary source-sans text-[14px]">House renovation projects breath new life into tired homes. We have significant experience working with listed buildings and ones within Heritage and Conservation areas. We use building techniques that are sympathetic to the building. You can update the layout to create better spaces. Make structural changes or perhaps just modernise what already exists. There are endless possibilities for completely changing the look, function and feel of your house renovation project.</p>
+          <p class="m-0 text-secondary source-sans text-[14px] !font-normal">House renovation projects breath new life into tired homes. We have significant experience working with listed buildings and ones within Heritage and Conservation areas. We use building techniques that are sympathetic to the building. You can update the layout to create better spaces. Make structural changes or perhaps just modernise what already exists. There are endless possibilities for completely changing the look, function and feel of your house renovation project.</p>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
@@ -60,7 +60,7 @@ function OurServices() {
        <img src={mapIcon}/>
         </div>
           <h5 class="my-2">Property Development</h5>
-          <p class="m-0 text-secondary source-sans text-[14px]">We are actively seeking properties with development potential. Also, land which may pose the opportunity for new build projects. Particularly we are looking for projects in the Holmfirth and Huddersfield areas. We will also consider opportunities which are further afield. Our aim is to produce unique and interesting properties built with care. If you have a property or land you would like to discuss then please get in touch.</p>
+          <p class="m-0 text-secondary source-sans text-[14px] !font-normal">We are actively seeking properties with development potential. Also, land which may pose the opportunity for new build projects. Particularly we are looking for projects in the Holmfirth and Huddersfield areas. We will also consider opportunities which are further afield. Our aim is to produce unique and interesting properties built with care. If you have a property or land you would like to discuss then please get in touch.</p>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
@@ -69,7 +69,7 @@ function OurServices() {
        <img src={shareIcon}/>
         </div>
           <h5 class="my-2">Landscaping & External Works</h5>
-          <p class="m-0 text-secondary source-sans text-[14px]">Hard landscaping projects create an interesting outside area to your property and will add to its value. You can include Paved Areas, Bound Aggregate Paths with Timber, Concrete or Brick Edging, Rock & Stone Features, Pergolas & Shelters, Ponds & Water Features. Additionally driveways and paths in a multitude of finishes, all carefully built to a high standard.</p>
+          <p class="m-0 text-secondary source-sans text-[14px] !font-normal">Hard landscaping projects create an interesting outside area to your property and will add to its value. You can include Paved Areas, Bound Aggregate Paths with Timber, Concrete or Brick Edging, Rock & Stone Features, Pergolas & Shelters, Ponds & Water Features. Additionally driveways and paths in a multitude of finishes, all carefully built to a high standard.</p>
         </div>
       </div>
       <div class="col-12 col-sm-6 col-lg-4">
@@ -78,7 +78,7 @@ function OurServices() {
        <img src={cityIcon}/>
         </div>
           <h5 class="my-2">Commercial Construction</h5>
-          <p class="m-0 text-secondary source-sans text-[14px]">Building services to the commercial sector are within our scope. We are capable of delivering small to medium-sized projects which may include office or restaurant refurbishments, extensions to commercial premises, complete construction of small industrial units, change of use on commercial premises and hard landscaping to external areas.</p>
+          <p class="m-0 text-secondary source-sans text-[14px] !font-normal">Building services to the commercial sector are within our scope. We are capable of delivering small to medium-sized projects which may include office or restaurant refurbishments, extensions to commercial premises, complete construction of small industrial units, change of use on commercial premises and hard landscaping to external areas.</p>
         </div>
       </div>
     </div>

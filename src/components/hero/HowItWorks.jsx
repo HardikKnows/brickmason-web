@@ -25,11 +25,11 @@ function HowItWorks(){
 
         <div className=" container grid grid-cols-12 pr-3 relative right-4">
             
-                <div className=" text-center  max-[767px]:px-[30px]">
+                <div className=" text-center  max-[767px]:px-[30px] ">
                     <button
                         className={`${
-                            effect && " turnOn animate delay-0"
-                        } poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-20 border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOn animate    delay-0 overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
+                            effect && " turnOnIn animate delay-0"
+                        } poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-20 border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn1s overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
                         onClick={() => {
                         setEffect(true);
                         }}
@@ -45,8 +45,8 @@ function HowItWorks(){
                 <div className=" text-center max-[767px]:px-[30px]">
                 <button
           className={`${
-            effect && "turnOn animate delayInAnimation4s delay-0"
-          }  poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOn animate delayInAnimation4s delay-0 overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
+            effect && "turnOnIn animate delayInAnimation4s delay-0"
+          }  poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn4s delay-0 overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
           onClick={() => {
             setEffect(true);
           }}
@@ -61,8 +61,8 @@ function HowItWorks(){
                 <div className=" text-center max-[767px]:px-[30px]">
                 <button
           className={`${
-            effect && "turnOn animate"
-          }  poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOn animate delayInAnimation8s delay-0 overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
+            effect && "turnOnIn animate"
+          }  poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn8s delay-0 overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
           onClick={() => {
             setEffect(true);
           }}
@@ -78,8 +78,8 @@ function HowItWorks(){
                 <div className=" text-center max-[767px]:px-[30px]">
                 <button
           className={`${
-            effect && "turnOn animate"
-          }  poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOn animate delayInAnimation12s delay-0 overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
+            effect && "turnOnIn animate"
+          }  poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn12s delay-0 overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
           onClick={() => {
             setEffect(true);
           }}
@@ -95,8 +95,8 @@ function HowItWorks(){
                 <div className=" text-center max-[767px]:px-[30px]">
                 <button
           className={`${
-            effect && "turnOn animate"
-          } poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOn animate delayInAnimation16s delay-0 overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
+            effect && "turnOnIn animate"
+          } poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn16s overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
           onClick={() => {
             setEffect(true);
           }}
@@ -112,8 +112,8 @@ function HowItWorks(){
                 <div className=" text-center  max-[767px]:px-[30px]">
 <button
           className={`${
-            effect && "turnOn animate"
-          }  poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOn animate delayInAnimation20s delay-0 overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
+            effect && "turnOnIn animate"
+          }  poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn20s overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
           onClick={() => {
             setEffect(true);
           }}
@@ -138,29 +138,29 @@ function HowItWorks(){
    
         <div className=" px-[15px] w-full  mx-auto overflow-hidden h-[320px] text-center  ">
             
-            <div className="animate noneToBlock  blockToNone4s pb-20 mx-auto w-fit ">
+            <div className=" noneToBlock  pb-20 mx-auto w-fit ">
                 <img src={HIWImg1}/>
             </div>
-            <div className="animate  noneToBlock4s  blockToNone8s pb-20 mx-auto w-fit">
+            <div className=" noneToBlock4s   pb-20 mx-auto w-fit">
                 <img src={HIWImg2}/>           
             </div>
-            <div className="animate   noneToBlock8s  blockToNone12s pb-20 mx-auto w-fit">
+            <div className="   noneToBlock8s   pb-20 mx-auto w-fit">
                 <img src={HIWImg3}/>
             </div>
-            <div className="animate noneToBlock12s  blockToNone16s pb-20 mx-auto w-fit">
+            <div className=" noneToBlock12s   pb-20 mx-auto w-fit">
                 <img src={HIWImg4}/>
             </div>
-            <div className="animate  noneToBlock16s  blockToNone20s pb-20 mx-auto w-fit">
+            <div className="  noneToBlock16s  s pb-20 mx-auto w-fit">
                 <img src={HIWImg5}/>
             </div>
-            <div className="animate  noneToBlock20s  blockToNone24s pb-20 mx-auto w-fit">
+            <div className="  noneToBlock20s  pb-20 mx-auto w-fit">
                 <img src={HIWImg6}/>
             </div>
      
         <div></div>
     </div>
 <div className="h-[162px] overflow-hidden">
-    <div className="p-[1.25rem] mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px] animate noneToBlock  blockToNone4s">
+    <div className="p-[1.25rem] mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px]  noneToBlock  ">
         <div className="wow fadeInUp" data-wow-delay="0ms" styleRe="visibility: visible; animation-delay: 0ms; animation-name: fadeInUp;">
             <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate  ">
                 <h3 className="poppins text-base md:text-[20px]/[]">01 Raise a Request</h3>
@@ -171,9 +171,9 @@ function HowItWorks(){
             <p></p>
         </div>
     </div>
-    <div className="p-[1.25rem]  mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px] animate noneToBlock4s  blockToNone8s">
+    <div className="p-[1.25rem]  mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px] noneToBlock4s  ">
         <div>
-            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate delayInAnimation5s">
+            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate ">
                 <h3 className="poppins text-base md:text-[20px]/[]">02 Meet our Expert</h3>
                 <p  className="source-sans text-xs">
                     Our experts visit you to take all the requirements and submit exhaustive specifications.
@@ -181,18 +181,18 @@ function HowItWorks(){
             </div>
         </div>
     </div>
-    <div className="p-[1.25rem]  mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px] animate noneToBlock8s  blockToNone12s">
+    <div className="p-[1.25rem]  mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px]  noneToBlock8s ">
         <div>
-            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate delayInAnimation9s">
+            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate ">
                 <h3  className="poppins text-base md:text-[20px]/[]">03 Book with Us</h3>
                 <p className="source-sans text-xs"> Good to go. You pay 5% of the estimated project cost as Booking Amount.</p>
             </div>
         </div>
         
     </div>
-    <div className="p-[1.25rem]  mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px] animate noneToBlock12s  blockToNone16s">
+    <div className="p-[1.25rem]  mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px]  noneToBlock12s  ">
         <div>
-            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate delayInAnimation13s">
+            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate ">
                 <h3  className="poppins text-base md:text-[20px]/[]">04 Receive designs</h3>
                 <p className="source-sans text-xs"> Our Professional will provide exhaustive drawings and designs till the customer is fully
                     satisfied.
@@ -201,9 +201,9 @@ function HowItWorks(){
             </div>
         </div>
     </div>
-    <div className="p-[1.25rem]  mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px] animate noneToBlock16s  blockToNone20s">
+    <div className="p-[1.25rem]  mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px]  noneToBlock16s  ">
         <div>
-            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate delayInAnimation17s">
+            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate ">
                 <h3  className="poppins text-base md:text-[20px]/[]">05 Track &amp; Transact</h3>
                 <p className="source-sans text-xs"> To ensure absolute trust, BrickMason provides an escrow model where you transfer the amount for
                     stage of the project. You can track the project through our customer application.
@@ -211,9 +211,9 @@ function HowItWorks(){
             </div>
         </div>
     </div>
-    <div className="p-[1.25rem]  w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px] animate noneToBlock20s  blockToNone24s">
+    <div className="p-[1.25rem]  w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px]  noneToBlock20s  ">
         <div>
-            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate delayInAnimation21s">
+            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate ">
                 <h3  className="poppins text-base md:text-[20px]/[]">06 Settle In</h3>
                 <p className="source-sans text-xs">We make sure you are well settled in your new home. Our journey together doesn't end here. We
                     provide

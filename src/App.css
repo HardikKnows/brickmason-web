@@ -154,7 +154,7 @@
    .delayInAnimation25s{
     -webkit-animation-delay: 25s;
     -moz-animation-delay: 25s;  
-    animation-delay: 25s;
+    animation-delay: 5s;
    }
    
    
@@ -187,159 +187,247 @@
   left: -12%;
   
 }
-.turnOn {
+.turnOnIn1s {
+  animation: 25s turnOn1s infinite linear;
 
-  animation-name: turnOn;
-  animation-fill-mode: both;
+  animation-fill-mode: none;
+
+}
+.turnOnIn4s {
+  animation: 25s turnOn4s infinite linear ;
+
+  animation-fill-mode: none;
+
+}
+.turnOnIn8s {
+  animation: 25s turnOn8s infinite linear ;
+  animation-fill-mode: none;
+
+}
+.turnOnIn12s {
+  animation: 25s turnOn12s infinite linear ;
+  animation-fill-mode: none;
+
+}
+.turnOnIn16s {
+  animation: 25s turnOn16s infinite linear ;
+  animation-fill-mode: none;
+
+}
+.turnOnIn20s {
+  animation: 25s turnOn20s infinite linear ;
+
+  animation-fill-mode: none;
 
 }
 
+
+
 /* The animation code */
 
-@keyframes turnOn {
-    from {background-color:transparent;}
-    to {background-color:black ;}
-    from {color: #00000088;}
-    to {color: white;}
+
+  @keyframes turnOn1s {
+    0%   {background-color: transparent; color:#00000088;}
+    3%   {background-color: transparent; color:#00000088;}
+    4%  {background-color: black; color:white;}
+    100% {background-color: black; color:white;}
   }
-  @-webkit-keyframes turnOn {
-    from {background-color:transparent;}
-    to {background-color:black ;}
-    from {color: #00000088;}
-    to {color: white;}
+  @-webkit-keyframes turnOn1s {
+    0%   {background-color: transparent; color:#00000088;}
+    3%   {background-color: transparent; color:#00000088;}
+    4%  {background-color: black; color:white;}
+    100% {background-color: black; color:white;}
+  }
+  @keyframes turnOn4s {
+    0%   {background-color: transparent; color:#00000088;}
+    15%   {background-color: transparent; color:#00000088;}
+    16%  {background-color: black; color:white;}
+    100% {background-color: black; color:white;}
+  }
+  @-webkit-keyframes turnOn4s {
+    0%   {background-color: transparent; color:#00000088;}
+    15%   {background-color: transparent; color:#00000088;}
+    16%  {background-color: black; color:white;}
+    100% {background-color: black; color:white;}
+  }
+  @keyframes turnOn8s {
+    0%   {background-color: transparent; color:#00000088;}
+    31%   {background-color: transparent; color:#00000088;}
+    32%  {background-color: black; color:white;}
+    100% {background-color: black; color:white;}
+  }
+  @-webkit-keyframes turnOn8s {
+    0%   {background-color: transparent; color:#00000088;}
+    31%   {background-color: transparent; color:#00000088;}
+    32%  {background-color: black; color:white;}
+    0%   {background-color: transparent; color:#00000088;}
+    100% {background-color: black; color:white;}
+  }
+  @keyframes turnOn12s {
+    0%   {background-color: transparent; color:#00000088;}
+    47%   {background-color: transparent; color:#00000088;}
+    48%  {background-color: black; color:white;}
+    100% {background-color: black; color:white;}
+  }
+  @-webkit-keyframes turnOn12s {
+    0%   {background-color: transparent; color:#00000088;}
+    47%   {background-color: transparent; color:#00000088;}
+    48%  {background-color: black; color:white;}
+    100% {background-color: black; color:white;}
+  }
+  @keyframes turnOn16s {
+    0%   {background-color: transparent; color:#00000088;}
+    63%   {background-color: transparent; color:#00000088;}
+    64%  {background-color: black; color:white;}
+    100% {background-color: black; color:white;}
+  }
+  @-webkit-keyframes turnOn16s {
+    0%   {background-color: transparent; color:#00000088;}
+    63%   {background-color: transparent; color:#00000088;}
+    64%  {background-color: black; color:white;}
+    100% {background-color: black; color:white;}
+  }
+  @keyframes turnOn20s {
+    0%   {background-color: transparent; color:#00000088;}
+    79%   {background-color: transparent; color:#00000088;}
+    80%  {background-color: black; color:white;}
+    100% {background-color: black; color:white;}
+  }
+  @-webkit-keyframes turnOn20s {
+    0%   {background-color: transparent; color:#00000088;}
+    79%   {background-color: transparent; color:#00000088;}
+    80%  {background-color: black; color:white;}
+    100% {background-color: black; color:white;}
   }
   
   /* The class to apply the animation to */
 
   /* The animation code */
 
-@keyframes noneToBlock {
-    from {display: none;}
-    to {display: block !important;}
+@keyframes noneToBlockIn0s {
+  0%   {display: none;}
+  3%   {display: none;}
+  4%  {display: block ;}
+  15% {display: none;}
+  100% {display: none;}
   }
-  @-webkit-keyframes noneToBlock {
-    from {display: none;}
-    to {display: block !important;}
+@-webkit-keyframes noneToBlockIn0s {
+  0%   {display: none;}
+  3%   {display: none;}
+  4%  {display: block ;}
+  15% {display: none;}
+  100% {display: none;}
   }
+@keyframes noneToBlockIn4s {
+  0%   {display: none;}
+  15%   {display: none;}
+  16%  {display: block ;}
+  31% {display: none;}
+  100% {display: none;}
+  }
+@-webkit-keyframes noneToBlockIn4s {
+  0%   {display: none;}
+  15%   {display: none;}
+  16%  {display: block ;}
+  31% {display: none;}
+  100% {display: none;}
+  }
+@keyframes noneToBlockIn8s {
+  0%   {display: none;}
+  31%   {display: none;}
+  32%  {display: block ;}
+  47% {display: none;}
+  100% {display: none;}
+  }
+@-webkit-keyframes noneToBlockIn8s {
+  0%   {display: none;}
+  31%   {display: none;}
+  32%  {display: block ;}
+  47% {display: none;}
+  100% {display: none;}
+  }
+@keyframes noneToBlockIn12s {
+  0%   {display: none;}
+  47%   {display: none;}
+  48%  {display: block ;}
+  63% {display: none;}
+  100% {display: none;}
+  }
+@-webkit-keyframes noneToBlockIn12s {
+  0%   {display: none;}
+  47%   {display: none;}
+  48%  {display: block ;}
+  63% {display: none;}
+  100% {display: none;}
+  }
+@keyframes noneToBlockIn16s {
+    0%   {display: none;}
+    63%   {display: none;}
+    64%  {display: block ;}
+    79% {display: none;}
+    100% {display: none;}
+    }
+  @-webkit-keyframes noneToBlockIn16s {
+    0%   {display: none;}
+    63%   {display: none;}
+    64%  {display: block ;}
+    79% {display: none;}
+    100% {display: none;}
+    }
+@keyframes noneToBlockIn20s {
+  0%   {display: none;}
+  79%   {display: none;}
+  80%  {display: block ;}
+  100% {display: none;}
+  }
+@-webkit-keyframes noneToBlockIn20s {
+  0%   {display: none;}
+  79%   {display: none;}
+  80%  {display: block ;}
+  100% {display: none;}
+  }
+
  /* The class to apply the animation to */
   .noneToBlock {
-    -webkit-animation-name: noneToBlock;
-    animation-name: noneToBlock;
+    animation: 25s noneToBlockIn0s infinite linear ;
+
+    animation-fill-mode: none;
+  
    
   }
   .noneToBlock4s {
-    -webkit-animation-name: noneToBlock;
-    animation-name: noneToBlock;
-    -webkit-animation-delay: 4s;
-    -moz-animation-delay: 4s;  
-    animation-delay: 4s;
+    animation: 25s noneToBlockIn4s infinite linear ;
+
+    animation-fill-mode: none;
+  
    
   }
   .noneToBlock8s {
-    -webkit-animation-name: noneToBlock;
-    animation-name: noneToBlock;
-    -webkit-animation-delay: 8s;
-    -moz-animation-delay: 8s;  
-    animation-delay: 8s;
+    animation: 25s noneToBlockIn8s infinite linear ;
+
+    animation-fill-mode: none;
+  
    
   }
   .noneToBlock12s {
-    -webkit-animation-name: noneToBlock;
-    animation-name: noneToBlock;
-    -webkit-animation-delay: 12s;
-    -moz-animation-delay: 12s;  
-    animation-delay: 12s;
-   
+    animation: 25s noneToBlockIn12s infinite linear ;
+
+    animation-fill-mode: none;
+  
   }
   .noneToBlock16s {
-    -webkit-animation-name: noneToBlock;
-    animation-name: noneToBlock;
-    -webkit-animation-delay: 16s;
-    -moz-animation-delay: 16s;  
-    animation-delay: 16s;
+    animation: 25s noneToBlockIn16s infinite linear ;
+
+    animation-fill-mode: none;
+  
    
   }
   .noneToBlock20s {
-    -webkit-animation-name: noneToBlock;
-    animation-name: noneToBlock;
-    -webkit-animation-delay: 20s;
-    -moz-animation-delay: 20s;  
-    animation-delay: 20s;
-   
-  }
-  @keyframes blockToNone  {
-    from {
-      display: block;
-    opacity: 1;
-  }
-    to {display: none;
-      opacity: 0;
-    }
-  }
-  @-webkit-keyframes blockToNone  {
-    from {display: block;}
-    to {display: none;}
-  }
- /* The class to apply the animation to */
- .blockToNone {
-  -webkit-animation-name: blockToNone ;
-  animation-name: blockToNone ;
- }
-  .blockToNone4s {
-    -webkit-animation-name: blockToNone ;
-    animation-name: blockToNone ;
-    -webkit-animation-delay: 4s;
-    -moz-animation-delay: 4s;  
-    animation-delay: 4s;
-   
-  }
-  .blockToNone8s {
-    -webkit-animation-name: blockToNone ;
-    animation-name: blockToNone ;
-    -webkit-animation-delay: 8s;
-    -moz-animation-delay: 8s;  
-    animation-delay: 8s;
-   
-  }
-  .blockToNone12s {
-    -webkit-animation-name: blockToNone ;
-    animation-name: blockToNone ;
-    -webkit-animation-delay: 12s;
-    -moz-animation-delay: 12s;  
-    animation-delay: 12s;
-   
-  }
-  .blockToNone16s {
-    -webkit-animation-name: blockToNone ;
-    animation-name: blockToNone ;
-    -webkit-animation-delay: 16s;
-    -moz-animation-delay: 16s;  
-    animation-delay: 16s;
-   
-  }
+    animation: 25s noneToBlockIn20s infinite linear ;
 
-.blockToNone20s {
-  -webkit-animation-name: blockToNone ;
-  animation-name: blockToNone ;
-  -webkit-animation-delay: 20s;
-  -moz-animation-delay: 20s;  
-  animation-delay: 20s;
- 
-}
-.blockToNone24s {
-  -webkit-animation-name: blockToNone ;
-  animation-name: blockToNone ;
-  -webkit-animation-delay: 24s;
-  -moz-animation-delay: 24s;  
-  animation-delay: 24s;
- 
-}
-  .remove-animation {
-    animation: none 4s !important;
-  }
-  .repeatAnimation {
-      animation: turnOn 50s -25s linear infinite;
-
+    animation-fill-mode: none;
+  
+   
   }
 
   
