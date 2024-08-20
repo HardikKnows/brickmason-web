@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+* { 
+  box-sizing: border-box;
+ } 
 
 .App-logo {
   height: 40vmin;
@@ -386,6 +389,89 @@
   80%  {display: block ;}
   100% {display: none;}
   }
+  @keyframes noneToBlockIn0sTable {
+    0%   {display: none;}
+    0.1%  {display: block ;}
+    33.3% {display: none;}
+    100% {display: none;}
+    }
+  @-webkit-keyframes noneToBlockIn0sTable {
+    0%   {display: none;}
+    0.1%  {display: block ;}
+    33.3% {display: none;}
+    100% {display: none;}
+    }
+    @keyframes noneToBlockIn10sTable {
+      0%   {display: none;}
+      33.3%   {display: none;}
+      33.4%  {display: block ;}
+      66.6% {display: none;}
+      100% {display: none;}
+      }
+    @-webkit-keyframes noneToBlockIn10sTable {
+      0%   {display: none;}
+      33.3%   {display: none;}
+      33.4%  {display: block ;}
+      66.6% {display: none;}
+      100% {display: none;}
+      }
+      @keyframes noneToBlockIn20sTable {
+        0%   {display: none;}
+        66.6%   {display: none;}
+        66.7%  {display: block ;}
+        100% {display: none;}
+        }
+      @-webkit-keyframes noneToBlockIn20sTable {
+        0%   {display: none;}
+        66.6%   {display: none;}
+        66.7%  {display: block ;}
+        100% {display: none;}
+        }
+        @keyframes orangeTableIn0s {
+          0%   {background-color: black; color: white;}
+          0.1%  {background-color: #ff7607; color: black}
+          33.2% {background-color: #ff7607; color: black}
+          33.3% {background-color: black; color: white;}
+          100% {background-color: black; color: white;}
+          }
+        @-webkit-keyframes orangeTableIn0s {
+          0%   {background-color: black; color: white;}
+          0.1%  {background-color: #ff7607; color: black}
+          33.2% {background-color: #ff7607; color: black}
+          33.3% {background-color: black; color: white;}
+          100% {background-color: black; color: white;}
+          }
+          @keyframes orangeTableIn10s {
+            0%    {background-color: black; color: white;}
+            33.3% {background-color: black; color: white;}
+            33.4% {background-color: #ff7607; color: black}
+            66.5% {background-color: #ff7607; color: black}
+            66.6% {background-color: black; color: white;}
+            100%  {background-color: black; color: white;}
+            }
+          @-webkit-keyframes orangeTableIn10s {
+            0%    {background-color: black; color: white;}
+            33.3% {background-color: black; color: white;}
+            33.4% {background-color: #ff7607; color: black}
+            66.5% {background-color: #ff7607; color: black}
+            66.6% {background-color: black; color: white;}
+            100%  {background-color: black; color: white;}
+            }
+            @keyframes orangeTableIn20s {
+              0%   {background-color: black; color: white;}
+              66.6%   {background-color: black; color: white;}
+              66.7%  {background-color: #ff7607; color: black}
+              99.9% {background-color: #ff7607; color: black}
+              100% {background-color: black; color: white;}
+            }
+            @-webkit-keyframes orangeTableIn20s {
+              0%   {background-color: black; color: white;}
+              66.6%   {background-color: black; color: white;}
+              66.7%  {background-color: #ff7607; color: black}
+              99.9% {background-color: #ff7607; color: black}
+              100% {background-color: black; color: white;}
+            }
+
 
  /* The class to apply the animation to */
   .noneToBlock {
@@ -429,6 +515,38 @@
   
    
   }
+  .noneToBlock0sTable {
+    animation: 30s noneToBlockIn0sTable infinite linear;
+    animation-fill-mode: none;
+
+  }
+  .noneToBlock10sTable {
+    animation: 30s noneToBlockIn10sTable infinite linear;
+    animation-fill-mode: none;
+
+  }
+  .noneToBlock20sTable {
+    animation: 30s noneToBlockIn20sTable infinite linear;
+    animation-fill-mode: none;
+
+  }
+  .orangeTable0s {
+    animation: 30s orangeTableIn0s infinite linear;
+    animation-fill-mode: none;
+
+  }
+  .orangeTable10s {
+    animation: 30s orangeTableIn10s infinite linear;
+    animation-fill-mode: none;
+
+  }
+  .orangeTable20s {
+    animation: 30s orangeTableIn20s infinite linear;
+    animation-fill-mode: none;
+
+  }
+
+
 
   
 @-webkit-keyframes fadeUp {
@@ -561,4 +679,8 @@
     to{
         transform: scale(1.5,1.5);
     }
+  }
+.promo-btn-radius {
+    border-bottom-right-radius: 20% 30%;
+    border-top-left-radius: 20% 30%;
 }

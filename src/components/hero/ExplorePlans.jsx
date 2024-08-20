@@ -1,11 +1,13 @@
 
 import React from "react"
+import { useState } from "react";
 
 
 function ExplorepPlans() {
+    
 
 
-return <section className=" bg-lightbrownc py-[100px]">
+return <section className="container bg-lightbrownc py-[100px] ">
         <div className="container ">
             <div className="sm-padding text-left text-[#000000b2]">
                 <div className="content-info wow fadeInRight" data-wow-delay="300ms" styleRe="visibility: visible; animation-delay: 300ms; animation-name: fadeInRight;">
@@ -19,641 +21,640 @@ return <section className=" bg-lightbrownc py-[100px]">
                 </div>
             </div>
         </div>
-        <div className="container">
+        <div className="container flex justify-center content-center ">
             <div className="package_table">
-               <table cols="3" className="packageData1">
-                <tbody><tr><td><button className="default-btn-package" onclick="buttonPressed1(); showBasic(); " id="basicButton" styleRe="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">Basic - Rs 1,500/sq.ft</button></td>
-                    <td><button className="default-btn-package " onclick=" buttonPressed2(); showClassic()" id="classicButton" styleRe="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">Classic - Rs 1,700/sq.ft</button></td>
-                     <td><button className="default-btn-package" onclick="buttonPressed3(); showPremium()" id="premiumButton" styleRe="background-color: rgb(255, 118, 7); color: rgb(0, 0, 0);">Premium - Rs 1,900/sq.ft</button>
+               <table cols="3" className="packageData1 w-full workSans bg-black text-white h-[20px] md:h-[30px] lg:h-[45px] text-[8px] md:text-[10px] lg:text-[12px]">
+                <tbody><tr><td className="p-0"><button className="h-[20px] md:h-[30px] lg:h-[45px]  mx-[-4px] px-[10px] md:px-[39px] orangeTable0s w-full" onclick="buttonPressed1(); showBasic(); " id="basicButton" styleRe="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">Basic - Rs 1,500/sq.ft</button></td>
+                    <td className="p-0"><button className=" h-[20px] px-[10px] md:h-[30px] lg:h-[45px]  mx-[-4px] md:px-[39px] orangeTable10s w-full" onclick=" buttonPressed2(); showClassic()" id="classicButton" styleRe="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">Classic - Rs 1,700/sq.ft</button></td>
+                     <td className="p-0"><button className=" h-[20px] px-[10px] md:h-[30px] lg:h-[45px] mx-[-4px] md:px-[39px] orangeTable20s w-full" onclick="buttonPressed3(); showPremium()" id="premiumButton" styleRe="background-color: rgb(255, 118, 7); color: rgb(0, 0, 0);">Premium - Rs 1,900/sq.ft</button>
                      </td></tr>
                </tbody></table>
-                {/*<!-- Basic Package Data -->*/}
-                <table cols="3" className="packageData" id="BasicPackageData" styleRe="display: none;">
-                   
+                {/*<!-- Basic Package Data -->*/ }
+                <table cols="3" className=" bg-white text-black text-left noneToBlock0sTable" id="BasicPackageData" styleRe="display: none;">
                                         <tbody><tr onclick="BasicShow('Design')" id="Design">
-                        <td className="package_detail_title">DESIGN &amp; DRAWINGS</td>
-                        <td className="showmorebutton">+</td>
+                        <td className="  workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px]  ">DESIGN &amp; DRAWINGS</td>
+                        <td className=" inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px] ">+</td>
                         </tr><tr>
-                            <td className="package_details" id="DesignData" styleRe="display: none;">
+                            <td className=" workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                                 ARCHITECTURAL LAYOUT – 2D
                             </td>
                         </tr>
                         <tr>
-                            <td className="package_details" id="DesignData" styleRe="display: none;">
+                            <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                                 3D VISUALIZATION
                             </td>
                         </tr>
                         <tr>
-                            <td className="package_details" id="DesignData" styleRe="display: none;">
+                            <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                                 ELEVATION
                             </td>
                         </tr>
                     
                     
                     <tr onclick="BasicShow('Structure')" id="Structure">
-                        <td className="package_detail_title">STRUCTURE</td>
-                        <td className="showmorebutton">-</td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] ">STRUCTURE</td>
+                        <td className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             STEEL – K2
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             BRICKS – GOOD QUALITY
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             CEMENT – ULTRATECH
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             RCC DESIGN MIX – AS PER THE STRUCTURAL DESIGNER RECOMMENDATION
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             CEILING HEIGHT – UP TO 10 FT (FINISHED FLOOR LEVEL TO FINISHED FLOOR LEVEL)
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Kitchen')" id="Kitchen">
-                        <td className="package_detail_title"> KITCHEN</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> KITCHEN</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="KitchenData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             PLAIN WALL TILES UP TO 3FT HEIGHT ABOVE KITCHEN SLAB
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="KitchenData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             MAIN SINK FAUCET
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="KitchenData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             KITCHEN SINK
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="KitchenData" styleRe="display: none;"> 
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;"> 
                             SLAB – BARODA GREEN MARBLE
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Bathroom')" id="Bathroom">
-                        <td className="package_detail_title"> BATHROOM</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> BATHROOM</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="BathroomData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             PLAIN WALL TILES UP TO 7FT FEET HEIGHT
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="BathroomData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             SANITARY WARE &amp; CPVC FITTINGS – IRIS/ESSEL 
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="BathroomData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             CPVC PIPE – KISAN/ISO
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="BathroomData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             BATHROOM DOORS – PVC / ALUMINIUM
                         </td>
                     </tr>
                         
                     <tr onclick="BasicShow('Door')" id="Door">
-                        <td className="package_detail_title"> DOOR &amp; WINDOWS</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> DOOR &amp; WINDOWS</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DoorData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             ROOM DOORS – COMPRESSED WOOD 
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DoorData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             WINDOWS – NEEM
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DoorData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             WOODEN FRAME – NEEM
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Painting')" id="Painting">
-                        <td className="package_detail_title"> PAINTING</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> PAINTING</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="PaintingData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="PaintingData" styleRe="display: none;">
                             ASIAN PUTTY + WALL MASTA OR EQUIVALENT
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Pop')" id="Pop">
-                        <td className="package_detail_title"> P.O.P</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> P.O.P</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="PopData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="PopData" styleRe="display: none;">
                             ISO POP ON CEILING.
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Flooring')" id="Flooring">
-                        <td className="package_detail_title"> FLOORING</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> FLOORING</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="FlooringData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             INTERIOR TILES – PLAIN TILES (2*2)
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="FlooringData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             PORTICO TILES – HEAVY DUTY
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="FlooringData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             STAIRCASE – BARODA GREEN
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="FlooringData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             BATHROOM – 1*1 FLOOR TILES
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Electrical')" id="Electrical">
-                        <td className="package_detail_title"> ELECTRICAL</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> ELECTRICAL</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="ElectricalData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="ElectricalData" styleRe="display: none;">
                             WIRES – ANCHOR
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="ElectricalData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="ElectricalData" styleRe="display: none;">
                             SWITCHES – ANCHOR RIDER
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Miscellaneous')" id="Miscellaneous">
-                        <td className="package_detail_title"> MISCELLANEOUS</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> MISCELLANEOUS</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="MiscellaneousData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             OVERHEAD TANK – 500 LITRES.
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="MiscellaneousData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             STAIRCASE RAILING – SS202
                         </td>
                     </tr>
                 </tbody></table>
-               
-               {// <!-- Classic Package Data -->//
-               }
-                <table cols="3" className="packageData" id="ClassicPackageData" styleRe="display: none;">
+                {/* Classic Package Data */}
+                <table cols="3" className="bg-white text-black text-left noneToBlock10sTable" id="ClassicPackageData" styleRe="display: block;">
                     <tbody><tr onclick="BasicShow('Design')" design="">
-                        <td className="package_detail_title"> DESIGN &amp; DRAWINGS</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> DESIGN &amp; DRAWINGS</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DesignData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                             ARCHITECTURAL LAYOUT – 2D
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DesignData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                             3D VISUALIZATION
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DesignData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                             MEP DRAWINGS
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DesignData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                             ELEVATION
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Structure')" id="Structure">
-                        <td className="package_detail_title"> STRUCTURE</td>
-                        <td><button className="showmorebutton">-</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> STRUCTURE</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             STEEL – KAMDHENU
                                                 </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             BRICKS – AVVAL
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             CEMENT – ULTRATECH, ACC GOLD FOR SLAB
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             RCC DESIGN MIX – AS PER THE STRUCTURAL DESIGNER RECOMMENDATION
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             CEILING HEIGHT – UP TO 10 FT (FINISHED FLOOR LEVEL TO FINISHED FLOOR LEVEL)
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Kitchen')" id="Kitchen">
-                        <td className="package_detail_title"> KITCHEN</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> KITCHEN</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="KitchenData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             CERAMIC TILES UP TO 3FT HEIGHT ABOVE KITCHEN SLAB
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="KitchenData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             MAIN SINK FAUCET
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="KitchenData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             KITCHEN SINK (STAINLESS STEEL)
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="KitchenData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             SLAB – BLACK MARBLE 
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Bathroom')" id="Bathroom">
-                        <td className="package_detail_title"> BATHROOM</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> BATHROOM</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="BathroomData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             CERAMIC TILES UP TO 7FT FEET HEIGHT
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="BathroomData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             SANITARY WARE &amp; CPVC FITTINGS – CERA 
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="BathroomData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             CPVC PIPE – ASHIRWAD
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="BathroomData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             BATHROOM DOORS – PVC / ALUMINIUM
                         </td>
                     </tr>
                         
                     <tr onclick="BasicShow('Door')" id="Door">
-                        <td className="package_detail_title"> DOOR &amp; WINDOWS</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> DOOR &amp; WINDOWS</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DoorData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             ROOM DOORS – COMPRESSED WOOD 
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DoorData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             JAALI DOORS &amp; WINDOWS
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DoorData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             WINDOWS – SAGWAN
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DoorData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             WOODEN FRAME – MALAYSIAN
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Painting')" id="Painting">
-                        <td className="package_detail_title"> PAINTING</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> PAINTING</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="PaintingData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="PaintingData" styleRe="display: none;">
                             BIRLA PUTTY (2 COAT) + EMULSION
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Pop')" id="Pop">
-                        <td className="package_detail_title"> P.O.P</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> P.O.P</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="PopData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="PopData" styleRe="display: none;">
                             SAKARNI POP ON CEILING.
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Flooring')" id="Flooring">
-                        <td className="package_detail_title"> FLOORING</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> FLOORING</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="FlooringData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             INTERIOR TILES – PLAIN TILES (2*2)
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="FlooringData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             PORTICO TILES – HEAVY DUTY
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="FlooringData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             STAIRCASE – BLACK MARBLE
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="FlooringData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             BATHROOM – 1*1 FLOOR TILES
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Electrical')" id="Electrical">
-                        <td className="package_detail_title"> ELECTRICAL</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> ELECTRICAL</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="ElectricalData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="ElectricalData" styleRe="display: none;">
                             WIRES – POLYCAB
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="ElectricalData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="ElectricalData" styleRe="display: none;">
                             SWITCHES – ANCHOR PENTA
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Miscellaneous')" id="Miscellaneous">
-                        <td className="package_detail_title"> MISCELLANEOUS</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> MISCELLANEOUS</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="MiscellaneousData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             OVERHEAD TANK – 1000 LITRES.
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="MiscellaneousData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             STAIRCASE RAILING – SS304
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="MiscellaneousData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             WALLPAPER TEXTURE
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="MiscellaneousData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             T.V. UNITS
                         </td>
                     </tr>
                 </tbody></table>
-                {//<!-- Premium Package Data -->
-                }
-                <table cols="3" className="packageData" id="PremiumPackageData" styleRe="display: block;">
+               {/*} Premium Package Data */}
+                <table cols="3" className="bg-white text-black text-left noneToBlock20sTable"  id="PremiumPackageData" styleRe="display: none;">
                     <tbody><tr onclick="BasicShow('Design')" id="Design">
-                        <td className="package_detail_title"> DESIGN &amp; DRAWINGS</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> DESIGN &amp; DRAWINGS</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DesignData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                             ARCHITECTURAL LAYOUT – 2D
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DesignData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                             3D VISUALIZATION
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DesignData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                             MEP DRAWINGS
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DesignData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                             ELEVATION
                         </td>
                     </tr>
                     <tr id="Structure" onclick="BasicShow('Structure')">
-                        <td className="package_detail_title"> STRUCTURE</td>
-                        <td><button className="showmorebutton">-</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> STRUCTURE</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             STEEL – KAMDHENU/ TATA
                                                 </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             BRICKS – AVVAL
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             CEMENT – ULTRATECH, ACC GOLD FOR SLAB
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             RCC DESIGN MIX – AS PER THE STRUCTURAL DESIGNER RECOMMENDATION
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="StructureData" styleRe="display: block;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             CEILING HEIGHT – UP TO 10 FT (FINISHED FLOOR LEVEL TO FINISHED FLOOR LEVEL)
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Kitchen')" id="Kitchen">
-                        <td className="package_detail_title"> KITCHEN</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> KITCHEN</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="KitchenData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             CERAMIC TILES UP TO 3FT HEIGHT ABOVE KITCHEN SLAB
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="KitchenData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             MAIN SINK FAUCET
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="KitchenData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             KITCHEN SINK (STAINLESS STEEL)
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="KitchenData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             SLAB – RED GRANITE 
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Bathroom')" id="Bathroom">
-                        <td className="package_detail_title"> BATHROOM</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> BATHROOM</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="BathroomData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             CERAMIC TILES UP TO 7FT FEET HEIGHT
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="BathroomData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             SANITARY WARE &amp; CPVC FITTINGS – JAQUAR
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="BathroomData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             CPVC PIPE – SUPREME/ASTRAL
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="BathroomData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             BATHROOM DOORS – SAGWAN
                         </td>
                     </tr>
                         
                     <tr onclick="BasicShow('Door')" id="Door">
-                        <td className="package_detail_title"> DOOR &amp; WINDOWS</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> DOOR &amp; WINDOWS</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DoorData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             ROOM DOORS – DESIGNER DOOR  
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DoorData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             JAALI DOORS &amp; WINDOWS
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DoorData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             WINDOWS – SHEESHAM
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="DoorData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             WOODEN FRAME – KAPOOR/MARBLE
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Painting')" id="Painting">
-                        <td className="package_detail_title"> PAINTING</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> PAINTING</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="PaintingData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="PaintingData" styleRe="display: none;">
                             BIRLA PUTTY (2 COAT) + ROYAL SHINE
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Pop')" id="Pop">
-                        <td className="package_detail_title"> P.O.P</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> P.O.P</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="PopData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="PopData" styleRe="display: none;">
                             SAKARNI POP ON CEILING.
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Flooring')" id="Flooring">
-                        <td className="package_detail_title"> FLOORING</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> FLOORING</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="FlooringData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             INTERIOR TILES – PLAIN TILES (4*2)
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="FlooringData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             PORTICO TILES – HEAVY DUTY
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="FlooringData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             STAIRCASE – RED GRANITE
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="FlooringData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             BATHROOM – 2*2 FLOOR TILES
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Electrical')" id="Electrical">
-                        <td className="package_detail_title"> ELECTRICAL</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> ELECTRICAL</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="ElectricalData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="ElectricalData" styleRe="display: none;">
                             WIRES – HAVELLS
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="ElectricalData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="ElectricalData" styleRe="display: none;">
                             SWITCHES – ANCHOR ROMA
                         </td>
                     </tr>
                     <tr onclick="BasicShow('Miscellaneous')" id="Miscellaneous">
-                        <td className="package_detail_title"> MISCELLANEOUS</td>
-                        <td><button className="showmorebutton">+</button></td>
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> MISCELLANEOUS</td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="MiscellaneousData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             OVERHEAD TANK – 1000 LITRES.
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="MiscellaneousData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             STAIRCASE RAILING – SS304
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="MiscellaneousData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             WALLPAPER TEXTURE*
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="MiscellaneousData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             T.V. UNITS
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="MiscellaneousData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             WOODEN FLOORING*
                         </td>
                     </tr>
                     <tr>
-                        <td className="package_details" id="MiscellaneousData" styleRe="display: none;">
+                        <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             WARDROBE PANELLING*
                         </td>
                     </tr>
                 </tbody></table>
             </div>
         </div>
-        <a id="get_free_quota" href="contact.html" className="default-btn">Get Free Quote</a>
-        
-    </section>
+        <div className="flex justify-center content-center">        
+        <div className="inner-layer  bg-orangebrick w-40 h-10 flex justify-center content-center text-center rounded mt-[30px] " >          
+            <a href="#" className="no-underline text-white text-sm tracking-normal font-semibold uppercase inline-block leading-10">Get Free Quote</a>
+        </div>
+    </div>
+</section>
+}
 
-            }
-            export default ExplorepPlans;
+export default ExplorepPlans;

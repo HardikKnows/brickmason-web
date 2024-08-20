@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import HIWImg1 from "../../assets/how-it-works-1.png";
-import HIWImg2 from "../../assets/how-it-works-2.png";
-import HIWImg3 from "../../assets/how-it-works-3.png";
-import HIWImg4 from "../../assets/how-it-works-4.png";
-import HIWImg5 from "../../assets/how-it-works-5.png";
-import HIWImg6 from "../../assets/how-it-works-6.png";
+import HIWImg1 from "../../assets/howItWorks/how-it-works-1.png";
+import HIWImg2 from "../../assets/howItWorks/how-it-works-2.png";
+import HIWImg3 from "../../assets/howItWorks/how-it-works-3.png";
+import HIWImg4 from "../../assets/howItWorks/how-it-works-4.png";
+import HIWImg5 from "../../assets/howItWorks/how-it-works-5.png";
+import HIWImg6 from "../../assets/howItWorks/how-it-works-6.png";
 
 
 function HowItWorks(){
@@ -29,7 +29,7 @@ function HowItWorks(){
                     <button
                         className={`${
                             effect && " turnOnIn animate delay-0"
-                        } poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-20 border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn1s overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
+                        } poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-20 border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn1s overflow-visible xsm:w-[30px] xsm:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
                         onClick={() => {
                         setEffect(true);
                         }}
@@ -161,12 +161,12 @@ function HowItWorks(){
     </div>
 <div className="h-[162px] overflow-hidden">
     <div className="p-[1.25rem] mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px]  noneToBlock  ">
-        <div className="wow fadeInUp" data-wow-delay="0ms" styleRe="visibility: visible; animation-delay: 0ms; animation-name: fadeInUp;">
+        <div>
             <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate  ">
                 <h3 className="poppins text-base md:text-[20px]/[]">01 Raise a Request</h3>
                 <p className="source-sans text-xs"> Raise a service request or call us at +91-9161003434. Our technical expert will get in touch
                     with you.<br/>
-                    <a className="widget-links" href="/lets-build.html">Let's build</a>
+                    <a  href="/lets-build.html">Let's build</a>
             </p></div>
             <p></p>
         </div>

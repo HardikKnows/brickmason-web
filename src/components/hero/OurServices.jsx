@@ -1,9 +1,9 @@
 import React from "react";
-import folderIcon from "../../assets/folder.png"
-import spinnerIcon from "../../assets/spinner.png"
-import mapIcon from "../../assets/map.png"
-import shareIcon from "../../assets/share.png"
-import cityIcon from "../../assets/city.png"
+import folderIcon from "../../assets/OurServices/folder.png"
+import spinnerIcon from "../../assets/OurServices/spinner.png"
+import mapIcon from "../../assets/OurServices/map.png"
+import shareIcon from "../../assets/OurServices/share.png"
+import cityIcon from "../../assets/OurServices/city.png"
 
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,7 +13,7 @@ function OurServices() {
         <section class="py-5 py-xl-8">
   <div class="container">
     <div class="row justify-content-md-center">
-      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6  ">
         <h2 class="mb-4 display-5 text-center poppins text-[22px]">Our Services</h2>
         <p class="text-secondary mb-5 text-center workSans text-xs md:text-base">Flawless construction powered by deep expertise.</p>
         <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle"/>

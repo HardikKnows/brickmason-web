@@ -1,0 +1,25 @@
+{
+    "resources": [
+      {
+        "title": "Find me on Mastodon",
+        "link": "https://indieweb.social/@kendalmintcode",
+        "imageUrl": "../../assets/project-1.jpg"
+      },
+      {
+        "title": "Welcome to K-Tech",
+        "link": "https://k-tech.systems",
+        "imageUrl": "../../assets/project-2.jpg"
+      },
+      {
+        "title": "Some sort of third title",
+        "link": "https://indieweb.social/@kendalmintcode",
+        "imageUrl": "../../assets/project-3.jpg"
+      },
+  
+      {
+        "title": "Super item number the last",
+        "link": "https://indieweb.social/@kendalmintcode",
+        "imageUrl": "../../assets/project-4.jpg"
+      }
+    ]
+  }
