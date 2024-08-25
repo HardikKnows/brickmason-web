@@ -4,7 +4,49 @@ import { useState } from "react";
 
 
 function ExplorepPlans() {
+    const [isVisible1, setIsVisible1] = useState(false);
+    function basicShowDesign () {
+        return setIsVisible1(!isVisible1);
+    }
+    const [isVisible2, setIsVisible2] = useState(false);
+    function basicShowStructure () {
+        return setIsVisible2(!isVisible2);
+    }
+    const [isVisible3, setIsVisible3] = useState(false);
+    function basicShowKitchen () {
+        return setIsVisible3(!isVisible3);
+    }
+    const [isVisible4, setIsVisible4] = useState(false);
+    function basicShowBathroom () {
+        return setIsVisible4(!isVisible4);
+    }
+    const [isVisible5, setIsVisible5] = useState(false);
+    function basicShowDoor () {
+        return setIsVisible5(!isVisible5);
+    }
+
+    const [isVisible6, setIsVisible6] = useState(false);
+    function basicShowPainting () {
+        return setIsVisible6(!isVisible6);
+    }
+    const [isVisible7, setIsVisible7] = useState(false);
+    function basicShowPop () {
+        return setIsVisible7(!isVisible7);
+    }
+    const [isVisible8, setIsVisible8] = useState(false);
+    function basicShowFlooring () {
+        return setIsVisible8(!isVisible8);
+    }
+    const [isVisible9, setIsVisible9] = useState(false);
+    function basicShowElectrical () {
+        return setIsVisible9(!isVisible9);
+    }
+    const [isVisible10, setIsVisible10] = useState(false);
+    function basicShowMiscellaneous () {
+        return setIsVisible10(!isVisible10);
+    }
     
+  
 
 
 return <section className="container bg-lightbrownc py-[100px] ">
@@ -24,17 +66,20 @@ return <section className="container bg-lightbrownc py-[100px] ">
         <div className="container flex justify-center content-center ">
             <div className="package_table">
                <table cols="3" className="packageData1 w-full workSans bg-black text-white h-[20px] md:h-[30px] lg:h-[45px] text-[8px] md:text-[10px] lg:text-[12px]">
-                <tbody><tr><td className="p-0"><button className="h-[20px] md:h-[30px] lg:h-[45px]  mx-[-4px] px-[10px] md:px-[39px] orangeTable0s w-full" onclick="buttonPressed1(); showBasic(); " id="basicButton" styleRe="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">Basic - Rs 1,500/sq.ft</button></td>
-                    <td className="p-0"><button className=" h-[20px] px-[10px] md:h-[30px] lg:h-[45px]  mx-[-4px] md:px-[39px] orangeTable10s w-full" onclick=" buttonPressed2(); showClassic()" id="classicButton" styleRe="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">Classic - Rs 1,700/sq.ft</button></td>
-                     <td className="p-0"><button className=" h-[20px] px-[10px] md:h-[30px] lg:h-[45px] mx-[-4px] md:px-[39px] orangeTable20s w-full" onclick="buttonPressed3(); showPremium()" id="premiumButton" styleRe="background-color: rgb(255, 118, 7); color: rgb(0, 0, 0);">Premium - Rs 1,900/sq.ft</button>
+                <tbody><tr><td className="p-0"><button className="h-[20px] md:h-[30px] lg:h-[45px]  mx-[-4px] px-[10px] md:px-[39px] orangeTable0s w-full" onClick="buttonPressed1(); showBasic(); " id="basicButton" styleRe="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">Basic - Rs 1,500/sq.ft</button></td>
+                    <td className="p-0"><button className=" h-[20px] px-[10px] md:h-[30px] lg:h-[45px]  mx-[-4px] md:px-[39px] orangeTable10s w-full" onClick=" buttonPressed2(); showClassic()" id="classicButton" styleRe="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">Classic - Rs 1,700/sq.ft</button></td>
+                     <td className="p-0"><button className=" h-[20px] px-[10px] md:h-[30px] lg:h-[45px] mx-[-4px] md:px-[39px] orangeTable20s w-full" onClick="buttonPressed3(); showPremium()" id="premiumButton" styleRe="background-color: rgb(255, 118, 7); color: rgb(0, 0, 0);">Premium - Rs 1,900/sq.ft</button>
                      </td></tr>
                </tbody></table>
                 {/*<!-- Basic Package Data -->*/ }
                 <table cols="3" className=" bg-white text-black text-left noneToBlock0sTable" id="BasicPackageData" styleRe="display: none;">
-                                        <tbody><tr onclick="BasicShow('Design')" id="Design">
+                                        <tbody><tr onClick={basicShowDesign} id="Design">
                         <td className="  workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px]  ">DESIGN &amp; DRAWINGS</td>
-                        <td className=" inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px] ">+</td>
-                        </tr><tr>
+                        <td className=" inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px] ">{isVisible1 ? '-' : '+'}</td>
+                        </tr> 
+                        {isVisible1 && (
+<div>
+                        <tr>
                             <td className=" workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                                 ARCHITECTURAL LAYOUT – 2D
                             </td>
@@ -49,12 +94,15 @@ return <section className="container bg-lightbrownc py-[100px] ">
                                 ELEVATION
                             </td>
                         </tr>
+                        </div>
+                        )}
                     
-                    
-                    <tr onclick="BasicShow('Structure')" id="Structure">
+                    <tr onClick={basicShowStructure} id="Structure">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] ">STRUCTURE</td>
-                        <td className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</td>
+                        <td className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible2 ? '-' : '+'}</td>
                     </tr>
+                    {isVisible2 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             STEEL – K2
@@ -80,10 +128,15 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             CEILING HEIGHT – UP TO 10 FT (FINISHED FLOOR LEVEL TO FINISHED FLOOR LEVEL)
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Kitchen')" id="Kitchen">
+                    </div>
+                        )}
+                    
+                    <tr onClick={basicShowKitchen}  id="Kitchen">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> KITCHEN</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible3 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible3 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             PLAIN WALL TILES UP TO 3FT HEIGHT ABOVE KITCHEN SLAB
@@ -104,10 +157,14 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             SLAB – BARODA GREEN MARBLE
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Bathroom')" id="Bathroom">
+                    </div>
+                        )}
+                    <tr onClick={basicShowBathroom}  id="Bathroom">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> BATHROOM</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible4 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible4 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             PLAIN WALL TILES UP TO 7FT FEET HEIGHT
@@ -128,11 +185,14 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             BATHROOM DOORS – PVC / ALUMINIUM
                         </td>
                     </tr>
-                        
-                    <tr onclick="BasicShow('Door')" id="Door">
+                    </div>
+                        )}
+                    <tr onClick={basicShowDoor} id="Door">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> DOOR &amp; WINDOWS</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible5 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible5 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             ROOM DOORS – COMPRESSED WOOD 
@@ -148,28 +208,40 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             WOODEN FRAME – NEEM
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Painting')" id="Painting">
+                    </div>
+                        )}
+                    <tr onClick={basicShowPainting}  id="Painting">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> PAINTING</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible6 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible6 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="PaintingData" styleRe="display: none;">
                             ASIAN PUTTY + WALL MASTA OR EQUIVALENT
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Pop')" id="Pop">
+                    </div>
+                        )}
+                    <tr onClick={basicShowPop} id="Pop">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> P.O.P</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible7 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible7 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="PopData" styleRe="display: none;">
                             ISO POP ON CEILING.
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Flooring')" id="Flooring">
+                    </div>
+                        )}
+                    <tr onClick={basicShowFlooring}  id="Flooring">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> FLOORING</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible8 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible8 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             INTERIOR TILES – PLAIN TILES (2*2)
@@ -190,10 +262,15 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             BATHROOM – 1*1 FLOOR TILES
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Electrical')" id="Electrical">
+                    </div>
+                        )}
+                    <tr onClick={basicShowElectrical}  id="Electrical">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> ELECTRICAL</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible9 ? '-' : '+'}</button></td>
                     </tr>
+
+                    {isVisible9 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="ElectricalData" styleRe="display: none;">
                             WIRES – ANCHOR
@@ -204,10 +281,14 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             SWITCHES – ANCHOR RIDER
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Miscellaneous')" id="Miscellaneous">
+                    </div>
+                        )}
+                    <tr onClick={basicShowMiscellaneous} id="Miscellaneous">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> MISCELLANEOUS</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible10 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible10 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             OVERHEAD TANK – 500 LITRES.
@@ -218,13 +299,17 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             STAIRCASE RAILING – SS202
                         </td>
                     </tr>
+                    </div>
+                        )}
                 </tbody></table>
                 {/* Classic Package Data */}
                 <table cols="3" className="bg-white text-black text-left noneToBlock10sTable" id="ClassicPackageData" styleRe="display: block;">
-                    <tbody><tr onclick="BasicShow('Design')" design="">
-                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> DESIGN &amp; DRAWINGS</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
-                    </tr>
+                    <tbody><tr onClick={basicShowDesign} id="Design">
+                        <td className="  workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px]  ">DESIGN &amp; DRAWINGS</td>
+                        <td className=" inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px] ">{isVisible1 ? '-' : '+'}</td>
+                        </tr> 
+                        {isVisible1 && (
+                <div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                             ARCHITECTURAL LAYOUT – 2D
@@ -245,10 +330,14 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             ELEVATION
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Structure')" id="Structure">
-                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> STRUCTURE</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                    </div>
+                        )}
+                    <tr onClick={basicShowStructure} id="Structure">
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] ">STRUCTURE</td>
+                        <td className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible2 ? '-' : '+'}</td>
                     </tr>
+                    {isVisible2 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             STEEL – KAMDHENU
@@ -274,10 +363,15 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             CEILING HEIGHT – UP TO 10 FT (FINISHED FLOOR LEVEL TO FINISHED FLOOR LEVEL)
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Kitchen')" id="Kitchen">
+                    </div>
+                        )}
+                    <tr onClick={basicShowKitchen}  id="Kitchen">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> KITCHEN</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible3 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible3 && (
+<div>
+    
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             CERAMIC TILES UP TO 3FT HEIGHT ABOVE KITCHEN SLAB
@@ -298,10 +392,14 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             SLAB – BLACK MARBLE 
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Bathroom')" id="Bathroom">
+                    </div>
+                        )}
+                    <tr onClick={basicShowBathroom}  id="Bathroom">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> BATHROOM</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible4 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible4 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             CERAMIC TILES UP TO 7FT FEET HEIGHT
@@ -322,11 +420,14 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             BATHROOM DOORS – PVC / ALUMINIUM
                         </td>
                     </tr>
-                        
-                    <tr onclick="BasicShow('Door')" id="Door">
+                    </div>
+                        )}
+                    <tr onClick={basicShowDoor} id="Door">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> DOOR &amp; WINDOWS</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible5 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible5 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             ROOM DOORS – COMPRESSED WOOD 
@@ -347,28 +448,40 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             WOODEN FRAME – MALAYSIAN
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Painting')" id="Painting">
+                    </div>
+                        )}
+                    <tr onClick={basicShowPainting}  id="Painting">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> PAINTING</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible6 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible6 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="PaintingData" styleRe="display: none;">
                             BIRLA PUTTY (2 COAT) + EMULSION
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Pop')" id="Pop">
+                    </div>
+                        )}
+                    <tr onClick={basicShowPop} id="Pop">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> P.O.P</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible7 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible7 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="PopData" styleRe="display: none;">
                             SAKARNI POP ON CEILING.
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Flooring')" id="Flooring">
+                    </div>
+                        )}
+                    <tr onClick={basicShowFlooring}  id="Flooring">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> FLOORING</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible8 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible8 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             INTERIOR TILES – PLAIN TILES (2*2)
@@ -389,10 +502,15 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             BATHROOM – 1*1 FLOOR TILES
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Electrical')" id="Electrical">
+                    </div>
+                        )}
+                    <tr onClick={basicShowElectrical}  id="Electrical">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> ELECTRICAL</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible9 ? '-' : '+'}</button></td>
                     </tr>
+
+                    {isVisible9 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="ElectricalData" styleRe="display: none;">
                             WIRES – POLYCAB
@@ -403,10 +521,14 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             SWITCHES – ANCHOR PENTA
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Miscellaneous')" id="Miscellaneous">
+                    </div>
+                        )}
+                    <tr onClick={basicShowMiscellaneous} id="Miscellaneous">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> MISCELLANEOUS</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible10 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible10 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             OVERHEAD TANK – 1000 LITRES.
@@ -427,13 +549,17 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             T.V. UNITS
                         </td>
                     </tr>
+                    </div>
+                        )}
                 </tbody></table>
                {/*} Premium Package Data */}
                 <table cols="3" className="bg-white text-black text-left noneToBlock20sTable"  id="PremiumPackageData" styleRe="display: none;">
-                    <tbody><tr onclick="BasicShow('Design')" id="Design">
-                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> DESIGN &amp; DRAWINGS</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
-                    </tr>
+                    <tbody><tr onClick={basicShowDesign} id="Design">
+                        <td className="  workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px]  ">DESIGN &amp; DRAWINGS</td>
+                        <td className=" inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px] ">{isVisible1 ? '-' : '+'}</td>
+                        </tr> 
+                        {isVisible1 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DesignData" styleRe="display: none;">
                             ARCHITECTURAL LAYOUT – 2D
@@ -454,10 +580,14 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             ELEVATION
                         </td>
                     </tr>
-                    <tr id="Structure" onclick="BasicShow('Structure')">
-                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> STRUCTURE</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                    </div>
+                        )}
+                    <tr onClick={basicShowStructure} id="Structure">
+                        <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] ">STRUCTURE</td>
+                        <td className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible2 ? '-' : '+'}</td>
                     </tr>
+                    {isVisible2 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="StructureData" styleRe="display: none;">
                             STEEL – KAMDHENU/ TATA
@@ -483,10 +613,14 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             CEILING HEIGHT – UP TO 10 FT (FINISHED FLOOR LEVEL TO FINISHED FLOOR LEVEL)
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Kitchen')" id="Kitchen">
+                    </div>
+                        )}
+                    <tr onClick={basicShowKitchen}  id="Kitchen">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> KITCHEN</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible3 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible3 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="KitchenData" styleRe="display: none;">
                             CERAMIC TILES UP TO 3FT HEIGHT ABOVE KITCHEN SLAB
@@ -507,10 +641,14 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             SLAB – RED GRANITE 
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Bathroom')" id="Bathroom">
+                    </div>
+                        )}
+                    <tr onClick={basicShowBathroom}  id="Bathroom">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> BATHROOM</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible4 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible4 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="BathroomData" styleRe="display: none;">
                             CERAMIC TILES UP TO 7FT FEET HEIGHT
@@ -531,11 +669,14 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             BATHROOM DOORS – SAGWAN
                         </td>
                     </tr>
-                        
-                    <tr onclick="BasicShow('Door')" id="Door">
+                    </div>
+                        )}   
+                    <tr onClick={basicShowDoor} id="Door">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> DOOR &amp; WINDOWS</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible5 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible5 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="DoorData" styleRe="display: none;">
                             ROOM DOORS – DESIGNER DOOR  
@@ -556,28 +697,40 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             WOODEN FRAME – KAPOOR/MARBLE
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Painting')" id="Painting">
+                    </div>
+                        )}
+                    <tr onClick={basicShowPainting}  id="Painting">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> PAINTING</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible6 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible6 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="PaintingData" styleRe="display: none;">
                             BIRLA PUTTY (2 COAT) + ROYAL SHINE
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Pop')" id="Pop">
+                    </div>
+                        )}
+                    <tr onClick={basicShowPop} id="Pop">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> P.O.P</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible7 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible7 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="PopData" styleRe="display: none;">
                             SAKARNI POP ON CEILING.
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Flooring')" id="Flooring">
+                    </div>
+                        )}
+                    <tr onClick={basicShowFlooring}  id="Flooring">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> FLOORING</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible8 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible8 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="FlooringData" styleRe="display: none;">
                             INTERIOR TILES – PLAIN TILES (4*2)
@@ -598,10 +751,15 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             BATHROOM – 2*2 FLOOR TILES
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Electrical')" id="Electrical">
+                    </div>
+                        )}
+                    <tr onClick={basicShowElectrical}  id="Electrical">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> ELECTRICAL</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible9 ? '-' : '+'}</button></td>
                     </tr>
+
+                    {isVisible9 && (
+<div>
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="ElectricalData" styleRe="display: none;">
                             WIRES – HAVELLS
@@ -612,10 +770,15 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             SWITCHES – ANCHOR ROMA
                         </td>
                     </tr>
-                    <tr onclick="BasicShow('Miscellaneous')" id="Miscellaneous">
+                    </div>
+                        )}
+                    <tr onClick={basicShowMiscellaneous} id="Miscellaneous">
                         <td className="workSans uppercase  font-bold text-[12px]/[22px] md:text-[16px]/[26px]  py-[5px] pl-[10px] min-[580px]:pl-[34px] pr-[100px] xxsm:pr-[180px] xsm:pr-[250px] md:pr-[400px] lg:pr-[450px] "> MISCELLANEOUS</td>
-                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">+</button></td>
+                        <td><button className="inline-block workSans text-center  pb-[5px] pr-[30px] md:pr-[50px]">{isVisible10 ? '-' : '+'}</button></td>
                     </tr>
+                    {isVisible10 && (
+<div>
+    
                     <tr>
                         <td className="workSans text-[10px] md:text-[13px] font-normal pt-[3px] pl-[20px] xsm:pl-[30px] min-[580px]:pl-[50px]" id="MiscellaneousData" styleRe="display: none;">
                             OVERHEAD TANK – 1000 LITRES.
@@ -646,6 +809,8 @@ return <section className="container bg-lightbrownc py-[100px] ">
                             WARDROBE PANELLING*
                         </td>
                     </tr>
+                    </div>
+                        )}
                 </tbody></table>
             </div>
         </div>

@@ -684,3 +684,6 @@
     border-bottom-right-radius: 20% 30%;
     border-top-left-radius: 20% 30%;
 }
+h4 {
+  font-size: 16px !important;
+}

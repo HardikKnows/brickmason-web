@@ -7,6 +7,7 @@ import ProjectCarousel from "../hero/ProjectCarousel";
 import Vibes from "../hero/Vibes";
 import Referral from "../hero/Referral";
 import Promotional from "../hero/Promotional";
+import Footer from "../footer/Footer";
 
 
 function Home() {
@@ -20,7 +21,7 @@ function Home() {
       <Vibes/>
       <Referral/>
       <Promotional/>
-    
+      <Footer/>
     
       </div>
   );
