@@ -8,6 +8,7 @@ import Vibes from "../hero/Vibes";
 import Referral from "../hero/Referral";
 import Promotional from "../hero/Promotional";
 import Footer from "../footer/Footer";
+import Testimonial from "../hero/Testimonial";
 
 
 function Home() {
@@ -18,6 +19,7 @@ function Home() {
       <HowItWorks/>
       <OurServices/>
       <ExplorepPlans/>
+      {/*<Testimonial/>*/}
       <Vibes/>
       <Referral/>
       <Promotional/>
