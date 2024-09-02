@@ -15,8 +15,6 @@ function App() {
       <HeaderMobile />
       <HeaderWindow />
       <Home></Home>
-  
-      
       <FooterUtils />
       <FooterTabs />
     </div>

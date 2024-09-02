@@ -4,8 +4,8 @@ import { Carousel} from "react-bootstrap";
 function HeroSection() {  
   
   return  (  
-<div className='   '>  
-    <Carousel className=" overflow-hidden relative max-h-[400px] lg:max-h-[350px]  ">  
+<div >  
+    <Carousel className=" overflow-hidden relative max-h-[400px] lg:max-h-[350px]  "> 
   <Carousel.Item> 
     {/* this is for background image*/}
  <div className="bg-[length:500px_400px] min-[500px]:bg-[length:650px_500px] min-[601px]:bg-[length:750px_650px] sm:bg-[length:100%_650px] lg:bg-[length:100%_650px] h-screen  bg-img-1 d-block w-full animate-zoomin"></div>
