@@ -4,9 +4,9 @@ import { faClock, faCreditCard, faFileLines } from "@fortawesome/free-regular-sv
 
 function WhyUs() {
   return (
-    <div className="bg-[#F5F5F5]">
+    <div className="bg-[#e7e8e9]">
 
-    <div className="m-3 mt-5 xl:mx-36 bg-[#F5F5F5]">
+    <div className="p-3 pt-5 xl:mx-36 bg-[#e7e8e9]">
       <div className="text-2xl font-medium  text-[#2b2b2b]">Why BICKMASON?</div>
       <div className="mt-2">We ensure peace of mind, trust, and trasnparent construction.</div>
       <div className="grid md:grid-cols-4 m-1 grid-cols-1 sm:grid-cols-2 ">

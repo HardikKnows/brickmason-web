@@ -51,11 +51,12 @@ function Footer () {
 
                     <h4 className="text-[#fff] poppins">Get in Touch</h4>
                     <ul className="widget-links source-sans text-[12px] md:text-[16px]  pl-0">
-                        <li><a className="no-underline text-[#8d9aa8]"    href="tel:+919161003434">+919161003434</a></li>
+                        <li><a className="no-underline text-[#8d9aa8]"    href="tel:+918874778585">+918874778585</a></li>
+                        <li><a className="no-underline text-[#8d9aa8]"    href="tel:+918400400048">+918400400048</a></li>
                     </ul>
 
                     <ul className="widget-links source-sans text-[12px] md:text-[16px]  pl-0">
-                        <li><a className="no-underline text-[#8d9aa8]"    href="mailto:contact@brickmason.in">contact@brickmason.in</a></li>
+                        <li><a className="no-underline text-[#8d9aa8]"    href="mailto:brickmasonconstructions@gmail.com">brickmasonconstructions@gmail.com</a></li>
                     </ul>
 
                     <hr/>

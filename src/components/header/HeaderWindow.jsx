@@ -4,38 +4,38 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 
 function HeaderWindow() {
   return (
-    <div className="hidden shadow-md sticky top-0 flex-row py-1 bg-white z-50 lg:flex ">
+    <div className="hidden shadow-md sticky top-0 flex-row py-1  z-50 lg:flex  bg-[#1B5A67] h-24">
       <div className="px-8 xl:px-40">
-        <img className="max-h-16" src={logo} alt="Brand Logo" />
+        <img className="max-h-16 bg-[#fff]" src={logo} alt="Brand Logo" />
       </div>
-      <div className="ps-238 pt-5">
+      <div className="ps-238 pt-5 text-[#ffffff]">
         <a
-          className="custom-font px-1 mx-3 b-1 font-display-ElegantIcons font-light xl:text-lg hover:text-[#fc7404]"
+          className="quicksand  px-1 mx-3 b-1   xl:text-lg hover:text-[#fc7404]"
           href="#"
         >
           OUR PROJECTS
         </a>
         <a
-          className="px-1 me-3 b-1 font-sans font-light xl:text-lg hover:text-[#fc7404]"
+          className="px-1 me-3 b-1 quicksand font-light xl:text-lg hover:text-[#fc7404]"
           href="#"
         >
           COST ESTIMATOR
         </a>
         <a
-          className=" px-1 me-3 b-1 font-sans font-light xl:text-lg hover:text-[#fc7404]"
+          className=" px-1 me-3 b-1 quicksand font-light xl:text-lg hover:text-[#fc7404]"
           href="#"
         >
           HOW IT WORKS
         </a>
         <a
-          className="px-1 me-3 b-1 font-sans font-light xl:text-lg hover:text-[#fc7404]"
+          className="px-1 me-3 b-1 quicksand font-light xl:text-lg hover:text-[#fc7404]"
           href="#"
         >
           OUR SERVICES
         </a>
         <Menu as="div" className="relative inline-block text-left">
           <div>
-            <MenuButton className="inline-flex w-full justify-center px-3 py-2 xl:text-lg font-light  hover:text-[#fc7404]">
+            <MenuButton className="inline-flex w-full justify-center px-3 py-2 xl:text-lg quicksand hover:text-[#fc7404]">
               MORE
               <svg
                 class="-mr-1 h-7 w-5"

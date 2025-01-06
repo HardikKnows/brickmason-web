@@ -9,7 +9,7 @@ function Promotional () {
         </div>
         <div className=" flex flex-col">
             <div className=" flex ml-[20px] xxsm:ml-[40px] xsm:ml-[50px] xsm:w-[30%] md:ml-[80px] min-[992px]:ml-[100px] min-[992px]:w-[80%] lg:ml-[280px] ">
-                <div className=" ml-[7px] text-[16px] text-[#ff7607] !font-semibold mb-[80px] xsm:ml-[5px] md:ml-[20px] md:text-[30px] "><i className="fa fa-home"></i> 1200+<p className=" source-sans  text-[#000] mt-[8px]  !font-medium text-[14px] md:text-[20px] ">Homes</p>
+                <div className=" ml-[7px] text-[16px] text-[#ff7607] !font-semibold mb-[80px] xsm:ml-[5px] md:ml-[20px] md:text-[30px] "><i className="fa fa-home"></i> 60+<p className=" source-sans  text-[#000] mt-[8px]  !font-medium text-[14px] md:text-[20px] ">Homes</p>
                 </div>
                 <div className=" border-r-[3px] border-solid border-r-[#3635352a] ml-[30px] mr-[10px] h-[90px] xsm:ml-[80px] xsm:h-[100px]"></div>
                 <div className="ml-[7px] text-[16px] text-[#ff7607] !font-semibold mb-[80px] xsm:ml-[5px] md:ml-[20px] md:text-[30px]"><i className="fa fa-check-circle"></i> 100+<p className="source-sans  text-[#000] mt-[8px]  !font-medium text-[14px] md:text-[20px] ">Quality checks</p>
