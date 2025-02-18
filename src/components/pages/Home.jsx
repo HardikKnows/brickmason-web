@@ -3,7 +3,8 @@ import Carousel from "../hero/Carousel";
 import HowItWorks from "../hero/HowItWorks";
 import OurServices from "../hero/OurServices";
 import ExplorepPlans from "../hero/ExplorePlans";
-import ProjectCarousel from "../hero/ProjectCarousel";
+import ProjectsSection from '../hero/ProjectsSection'
+
 import Vibes from "../hero/Vibes";
 import Referral from "../hero/Referral";
 import Promotional from "../hero/Promotional";
@@ -28,6 +29,65 @@ function Home() {
     'we provide outstanding construction services',
   ];
 
+const projectData = [
+  {
+    title: "HOUSE 1",
+    description: "something to write description.",
+    image: "/car-images/slider2.png",
+    link: "https://example.com/portfolio",
+    location: "San Francisco, CA",
+    info: "G+1 ",
+    size:" 1000 sqft.",
+    package: "Premium package",
+    Time: "Premium package",
+  },
+  {
+    title: "HOUSE 2",
+    description: "something to write description.",
+    image: "/car-images/slider3.png",
+    link: "https://example.com/ecommerce",
+    location: "San Francisco, CA",
+    info: "G+1 ",
+    size:" 1000 sqft.",
+    package: "Classic package",
+    Time: "Premium package",
+  },
+  {
+    title: "HOUSE 3",
+    description: "something to write description.",
+    image: "/car-images/slider4.png",
+    link: "https://example.com/dashboard",
+    location: "San Francisco, CA",
+    info: "G+1 ",
+    size:" 1000 sqft.",
+    package: "Premium package",
+    Time: "Premium package",
+  },
+  {
+    title: "HOUSE 1",
+    description: "something to write description.",
+    image: "/car-images/pro4.JPG",
+    link: "https://example.com/portfolio",
+    location: "San Francisco, CA",
+    info: "G+1 ",
+    size:" 1000 sqft.",
+    package: "Premium package",
+    Time: "Premium package",
+  },
+  {
+    title: "HOUSE 1",
+    description: "something to write description.",
+    image: "/car-images/slider2.png",
+    link: "https://example.com/portfolio",
+    location: "San Francisco, CA",
+    info: "G+1 ",
+    size:" 1000 sqft.",
+    package: "Premium package",
+    Time: "Premium package",
+  },
+];
+
+
   return (
     <div>
       <Carousel images={images} locations={locations} captions={captions} autoSlide={true} slideInterval={4000}/>
@@ -39,6 +99,7 @@ function Home() {
       {/*<Vibes/>
       <Referral/>*/}
       <Promotional/>
+      <ProjectsSection projects={projectData} />
       <Footer/>
     
       </div>

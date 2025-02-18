@@ -43,12 +43,105 @@
     transform: rotate(360deg);
   }
 }
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  position: relative;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav ul li a:hover {
+  color: #007bff;
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none; /* Hide dropdown by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  min-width: 200px;
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown-menu li {
+  display: none; /* Ensure each item appears as a block inside the dropdown */
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown only on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+.cta .cta-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cta .cta-button:hover {
+  background-color: #0056b3;
+}
+
 
 /* Basic styling for the carousel container */
 .carousel-container {
   position: relative;
   width: 100%;
-  height: auto; /* Set height based on content */
+  height: 70vh; /* Set height based on content */
   overflow: hidden;
   margin: 0; /* Remove any default margin */
   display: flex; /* Make sure the items stretch to fill the container */
@@ -189,6 +282,103 @@
   
   
 }
+.projects-carousel-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.project-card {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+
+  overflow: hidden;
+  background-color: #b0abab;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: grab; /* Makes it clear that users can drag */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  
+}
+
+.project-image {
+  width: 95%;
+  height: 85%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  text-align: center;
+  padding: 1rem;
+}
+
+.project-card:hover .project-details {
+  opacity: 1;
+}
+
+.project-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-details p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-details a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: #0073e6;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.project-details a:hover {
+  background: #005bb5;
+}
+
+.project-location {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
 
 .workSans {
             font-family: "Work Sans", sans-serif;
