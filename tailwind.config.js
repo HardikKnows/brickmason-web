@@ -25,6 +25,7 @@ module.exports = {
         'blackHW': '#263a4f',
         'borderHW': '#00000088',
         'borderHW2': '#DA8301',
+        
        },
       // that is animation class
       animation: {

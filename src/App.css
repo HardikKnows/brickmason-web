@@ -56,7 +56,13 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  overflow: hidden; /* Prevent content from overflowing */
 }
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
 
 .logo img {
   height: 50px;
@@ -125,7 +131,7 @@
 
 
 .cta .cta-button {
-  background-color: #007bff;
+  background-color: #D2042D;
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
@@ -133,7 +139,7 @@
 }
 
 .cta .cta-button:hover {
-  background-color: #0056b3;
+  background-color: #D2042D;
 }
 
 
@@ -178,15 +184,15 @@
   display: block; /* Removes unwanted space below the image */
 }
 /* Dim effect overlay */
-.carousel-item .dim-overlay {
+{/*}.carousel-item .dim-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 90%;
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  z-index: 1; /* Ensure it is below text, but above the image */
-  transition: background-color 0.3s ease; /* Smooth transition for the dim effect */
+  /*z-index: 1; /* Ensure it is below text, but above the image */
+  /*transition: background-color 0.3s ease; /* Smooth transition for the dim effect */
 }
 .location-label {
   position: absolute;
@@ -282,103 +288,25 @@
   
   
 }
-.projects-carousel-section {
-  padding: 4rem 2rem;
-  background-color: #f9f9f9;
+/* Example CSS */
+/* Custom Swiper Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3b82f6; /* Blue color */
 }
 
-.section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #333;
+/* Custom Swiper Pagination Bullets */
+.swiper-pagination-bullet {
+  background: #3b82f6; /* Blue color */
 }
-
 .project-card {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  border-radius: 12px;
-
-  overflow: hidden;
-  background-color: #b0abab;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  cursor: grab; /* Makes it clear that users can drag */
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
-.project-image {
-  width: 95%;
-  height: 85%;
-  object-fit: cover;
-  display: block;
-}
-
-.project-details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  text-align: center;
-  padding: 1rem;
-}
-
-.project-card:hover .project-details {
-  opacity: 1;
-}
-
-.project-details h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-details p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.project-details a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  color: #fff;
-  background: #0073e6;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.project-details a:hover {
-  background: #005bb5;
-}
-
-.project-location {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-}
-
 
 .workSans {
             font-family: "Work Sans", sans-serif;

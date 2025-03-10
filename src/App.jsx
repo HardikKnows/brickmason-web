@@ -6,6 +6,10 @@ import HeaderMobile from "./components/header/HeaderMobile";
 import FooterUtils from "./components/footer/FooterUtils";
 import Loader from "./components/common/Loader";
 import Home from "./components/pages/Home";
+import ProjectDetails from './components/hero/ProjectDetails'; // Import the ProjectDetails component
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 
 function App() {
@@ -14,7 +18,13 @@ function App() {
       {/* <Loader /> */}
       <HeaderMobile />
       <HeaderWindow />
-      <Home></Home>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} /> {/* Home page with project section */}
+          <Route path="/projects/:id" element={<ProjectDetails />} /> {/* Details page */}
+        </Routes>
+    </Router>
+     
       <FooterUtils />
       <FooterTabs />
     </div>

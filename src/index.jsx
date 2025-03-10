@@ -1,7 +1,20 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import { createRoot } from 'react-dom/client'; // Import createRoot from react-dom/client
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+
+// Get the root element
+const container = document.getElementById('root');
+
+// Create a root
+const root = createRoot(container);
+
+// Render your app
+root.render(
+
+      <App />
+
+);
+
+

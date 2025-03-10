@@ -9,7 +9,7 @@ import HIWImg6 from "../../assets/howItWorks/how-it-works-6.png";
 
 function HowItWorks(){
     const [effect, setEffect] = useState(false)
-    return <section className=" bg-[#D0DDD0] py-[100px]">
+    return <section className=" bg-[#D6CBBF] py-[100px]">
     <div className="container !w-full px-4 text-left">
     
         <div className=" mb-[40px] ">
