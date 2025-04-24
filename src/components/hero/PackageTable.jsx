@@ -336,7 +336,7 @@ const PackageTable = () => {
           <table className="min-w-full bg-white border border-gray-200">
             <thead>
               <tr className="bg-gray-100">
-                <th className="py-3 px-4 border-b text-left text-gray-700">Features</th>
+                <th className="py-3 px-4 border-b text-left text-white bg-gray-700">Features</th>
                 {Object.keys(packages).map((planId) => (
                   <th
                     key={planId}
@@ -348,7 +348,7 @@ const PackageTable = () => {
                     {packages[planId].name} - {packages[planId].price}
                   </th>
                 ))}
-                <th className="py-3 px-4 border-b text-right text-gray-700">Actions</th> {/* New column for icons */}
+                <th className="py-3 px-4 border-b text-right text-white bg-gray-700">Actions</th> {/* New column for icons */}
               </tr>
             </thead>
             <tbody>

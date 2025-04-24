@@ -142,89 +142,130 @@
   background-color: #D2042D;
 }
 
-
-/* Basic styling for the carousel container */
-.carousel-container {
-  position: relative;
+/* Wrapper for carousel and headline */
+.carousel-wrapper {
+  display: flex;
   width: 100%;
-  height: 70vh; /* Set height based on content */
+  height: 80vh; /* Fixed height for the entire section */
   overflow: hidden;
-  margin: 0; /* Remove any default margin */
-  display: flex; /* Make sure the items stretch to fill the container */
-  justify-content: center;
-  align-items: center;
 }
 
-/* Styling for the carousel */
+/* Carousel Container (70% width) */
+.carousel-container {
+  position: relative;
+  width: 70%; /* Carousel takes 70% of the width */
+  height: 100%; /* Fixed height */
+  overflow: hidden;
+}
+
 .carousel {
   display: flex;
-  transition: transform 0.5s ease-in-out;
   width: 100%;
-  position: relative;
-  flex-direction: row; /* Ensure images are aligned horizontally */
-
+  height: 100%; /* Fixed height */
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+  transform: translateX(0); /* Initial position */
 }
 
 .carousel-item {
-  position: relative; /* Necessary for absolute positioning of child elements */
-  flex: 0 0 100%; /* Flex item will take full width of the container */
-  height: 100%; /* Ensure the item takes up full height of the container */
+  flex: 0 0 100%; /* Each slide takes full width */
+  position: relative;
+  height: 100%; /* Fixed height */
+  transition: opacity 0.5s ease-in-out; /* Optional: Fade effect */
+  opacity: 0; /* Hide inactive slides */
 }
 
-
 .carousel-item.active {
-  opacity: 1;
+  opacity: 1; /* Show active slide */
 }
 
 .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: fill; /* Prevent cropping, maintain aspect ratio */
-
-  display: block; /* Removes unwanted space below the image */
+  object-fit: cover; /* Ensure images cover the area without stretching */
+  display: block;
 }
-/* Dim effect overlay */
-{/*}.carousel-item .dim-overlay {
+
+.carousel-item .dim-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 90%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  /*z-index: 1; /* Ensure it is below text, but above the image */
-  /*transition: background-color 0.3s ease; /* Smooth transition for the dim effect */
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
+
 .location-label {
   position: absolute;
-  top: 20px; /* Fixed position from the top */
-  left: 20px; /* Fixed position from the left */
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-  color: white;
-  padding: 8px 15px;
+  top: 1px;
+  width: 20%;
+  background-color: #D3D3D3;
+  color: black;
+  padding: 8px 30px 8px 15px; /* Extra right padding */
   font-size: 18px;
   font-weight: bold;
-  border-radius: 5px;
-  z-index: 2; /* Ensure it's on top of other elements */
-  pointer-events: none; /* Prevents label from interfering with clicks */
+  border-radius: 5px 0 0 5px;
+  z-index: 2;
+  pointer-events: none;
+  
+  /* 45-degree internal notch */
+
+    /* ... (other styles remain the same) ... */
+    
+    clip-path: polygon(
+      0% 0%,                     /* Top-left */
+      100% 0%,                   /* Top-right */
+      100% calc(50% - 20px),     /* Start cut (top point) */
+      calc(100% - 20px) 50%,     /* Apex of cut (45° point) */
+      100% calc(50% + 20px),     /* End cut (bottom point) */
+      100% 100%,                 /* Bottom-right */
+      0% 100%                    /* Bottom-left */
+    );
+
 }
+.description-label {
+  
+  background-color: #D3D3D3;
+  color: black;
+  padding: 8px 30px 8px 15px; /* Extra right padding */
+  
+
+  border-radius: 5px 0 0 5px;
+  z-index: 2;
+  pointer-events: none;
+  
+  /* 45-degree internal notch */
+
+    /* ... (other styles remain the same) ... */
+    
+    clip-path: polygon(
+      0% 0%,                     /* Top-left */
+      100% 0%,                   /* Top-right */
+      100% calc(50% - 20px),     /* Start cut (top point) */
+      calc(100% - 20px) 50%,     /* Apex of cut (45° point) */
+      100% calc(50% + 20px),     /* End cut (bottom point) */
+      100% 100%,                 /* Bottom-right */
+      0% 100%                    /* Bottom-left */
+    );
+
+}
+
 .carousel-item .caption {
-   position: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the caption */
+  transform: translate(-50%, -50%);
   color: white;
-  font-size: 36px; /* Adjust based on preference */
+  font-size: 36px;
   font-weight: bold;
   text-align: center;
   padding: 10px 20px;
-  z-index: 2; /* Ensure the caption is above the dim overlay */
-  max-width: 80%; /* Prevents the caption from being too wide */
-  
-  /* Glowing text effect */
+  z-index: 2;
+  max-width: 80%;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(255, 255, 255, 0.4);
-  /* Adjust the shadow for more/less glow effect */
 }
-/* Navigation buttons */
+
+/* Navigation Buttons */
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -239,54 +280,72 @@
 }
 
 .prev {
-  left: 0;
+  left: 10px;
 }
 
 .next {
-  right: 0;
+  right: 10px;
 }
 
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.carousel-line {
-  width: 80%; /* Fixed width of the line (you can adjust this) */
-  height: 3px; /* The height of the line */
-  background: #ffffff; /* Light gray color */
-  margin: 20px auto 0; /* Centered horizontally with spacing from the carousel */
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for a clean look */
-}
-/* Styling for the text below the line */
-.carousel-text {
-  text-align: center; /* Center the text horizontally */
-  font-size: 18px; /* Set font size for the text */
-  color: #333; /* Dark gray text color */
-  margin-top: 20px; /* Space between the line and the text */
-  font-weight: 500; /* Medium weight for the text */
+
+/* Headline Section (30% width) */
+.headline-section {
+  width: 30%; /* Headline takes 30% of the width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-/* Optional: Style for making the text stand out (e.g., bold or a different color) */
-.carousel-text strong {
-  color: #2c3e50; /* Darker color for important text (optional) */
+.headline-content {
+  text-align: center;
 }
 
+.headline-content h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.5;
+}
 
-/*  Make the carousel a little smaller on tablets */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .carousel-container {
+  .carousel-wrapper {
     height: 60vh; /* Reduce height for tablets */
   }
-  
+
+  .carousel-item .caption {
+    font-size: 24px;
+  }
+
+  .location-label {
+    font-size: 16px;
+  }
+
+  .headline-content h1 {
+    font-size: 18px;
+  }
 }
 
-/* Make the carousel even smaller on mobile */
 @media (max-width: 480px) {
-  .carousel-container {
-    height: 30vh; /* Reduce height for small screens */
-   
+  .carousel-wrapper {
+    height: 30vh; /* Reduce height for mobile */
   }
-  
-  
+
+  .carousel-item .caption {
+    font-size: 18px;
+  }
+
+  .location-label {
+    font-size: 14px;
+  }
+
+  .headline-content h1 {
+    font-size: 14px;
+  }
 }
 /* Example CSS */
 /* Custom Swiper Navigation Arrows */

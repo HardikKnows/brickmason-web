@@ -13,6 +13,7 @@ import Referral from "../hero/Referral";
 import Promotional from "../hero/Promotional";
 import Footer from "../footer/Footer";
 import Testimonials from "../hero/Testimonials.jsx";
+import pic from "../../assets/images/prop.jpg"
 
 
 
@@ -20,7 +21,7 @@ function Home() {
   const images = [
     "/car-images/slider2.png",
     "/car-images/slider3.png",
-    "/car-images/slider4.png"
+    "/car-images/slider4.png",
   ];
   const locations = [
     'UP, Sultanpur',
@@ -28,13 +29,19 @@ function Home() {
     'UP, Lucknow',
   ];
   const captions = [
-    'we provide outstanding construction services',
-    'we provide outstanding construction services',
-    'we provide outstanding construction services',
+    {
+      title: "Premium Construction Services",
+      description: "Delivering exceptional quality in residential and commercial projects across Uttar Pradesh"
+    },
+    {
+      title: "Expert Remodeling Solutions",
+      description: "Transforming spaces with innovative designs and precision craftsmanship"
+    },
+    {
+      title: "End-to-End Project Management",
+      description: "From concept to completion, we handle every detail of your construction needs"
+    }
   ];
-  
-  
-
 
 
 
