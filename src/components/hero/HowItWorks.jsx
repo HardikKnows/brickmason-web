@@ -1,236 +1,155 @@
-import React, { useState } from "react";
-import HIWImg1 from "../../assets/howItWorks/how-it-works-1.png";
-import HIWImg2 from "../../assets/howItWorks/how-it-works-2.png";
-import HIWImg3 from "../../assets/howItWorks/how-it-works-3.png";
-import HIWImg4 from "../../assets/howItWorks/how-it-works-4.png";
-import HIWImg5 from "../../assets/howItWorks/how-it-works-5.png";
-import HIWImg6 from "../../assets/howItWorks/how-it-works-6.png";
+'use client';
 
+import { motion, useScroll } from 'framer-motion';
+import { useRef } from 'react';
+import HIW1 from "../../assets/howItWorks/how-it-works-1.jpg";
+import HIW2 from "../../assets/howItWorks/how-it-works-2.jpg";
+import HIW3 from "../../assets/howItWorks/how-it-works-3.png";
+import HIW4 from "../../assets/howItWorks/how-it-works-4.jpg";
+import HIW5 from "../../assets/howItWorks/how-it-works-5.png";
+import HIW6 from "../../assets/howItWorks/how-it-works-6.jpg";
 
-function HowItWorks(){
-    const [effect, setEffect] = useState(false)
-    return <section className=" bg-[#D6CBBF] py-[100px]">
-    <div className="container !w-full px-4 text-left">
-    
-        <div className=" mb-[40px] ">
-            <h2 className="poppins text-2xl/[26px]  md:text-3xl/[42px] text-blackHW ">How it works</h2>
-            <span className=" mb-3 workSans text-xs uppercase  text-blackHW">
-                Our steps are simple and easy to understand: Plan - Build - Track - Settle in.
-            </span>
-        </div>
-    </div>
-     
-    <div className="container p-0 !w-full md:px-4 md:mx-auto ml-  " >
- 
+const steps = [
+  { title: 'Raise a Request', description: 'Raise a service request or call us. Our expert will reach out to you.', img: HIW1 },
+  { title: 'Meet Our Experts', description: 'Experts gather your requirements and explain the process.', img: HIW2 },
+  { title: 'Book with Us', description: 'Confirm by paying 5% of the estimated project cost.', img: HIW3 },
+  { title: 'Receive Designs', description: 'Get detailed drawings like floor plans, 3D elevations, and more.', img: HIW4 },
+  { title: 'Track & Transact', description: 'Track progress and payments via Power play app securely.', img: HIW5 },
+  { title: 'Settle In', description: 'Move into your beautifully constructed home!', img: HIW6 },
+];
 
-        <div className=" container grid grid-cols-12 pr-3 relative right-4">
-            
-                <div className=" text-center  max-[767px]:px-[30px] ">
-                    <button
-                        className={`${
-                            effect && " turnOnIn animate delay-0"
-                        } poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-20 border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn1s overflow-visible xsm:w-[30px] xsm:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
-                        onClick={() => {
-                        setEffect(true);
-                        }}
-                        onAnimationEnd={() => setEffect(false)}
-                        >
-                        1
-                    </button>
+export default function HowItWorks() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 via-purple-50 to-pink-50 py-20 min-h-screen">
+      {/* Section Heading */}
+      <div className="text-center mb-20">
+        <h2 className="text-4xl md:text-5xl font-bold text-indigo-700 mb-4">How It Works</h2>
+        <p className="text-gray-500 uppercase tracking-wider">Plan - Build - Track - Settle In</p>
+      </div>
+
+      <div ref={ref} className="relative container mx-auto flex flex-col gap-24 px-4 z-10">
+        {/* SVG Path for the S-shaped arrow */}
+        <svg className="absolute hidden md:block w-full h-full top-0 left-0 pointer-events-none">
+          <path
+            id="s-curve"
+            d="M50% 100 
+             C50% 20, 50% 20, 50% 40
+             C50% 60, 50% 60, 50% 80
+             C50% 100, 50% 100, 50% 120
+             C50% 140, 50% 140, 50% 160
+             C50% 180, 50% 180, 50% 200
+             C50% 220, 50% 220, 50% 240
+             C50% 260, 50% 260, 50% 280
+             C50% 300, 50% 300, 50% 320
+             C50% 340, 50% 340, 50% 360
+             C50% 380, 50% 380, 50% 400
+             C50% 420, 50% 420, 50% 440
+             C50% 460, 50% 460, 50% 480
+             C50% 500, 50% 500, 50% 0"
+            fill="none"
+            stroke="url(#arrow-gradient)"
+            strokeWidth="4"
+            strokeDasharray="1000"
+            strokeDashoffset="1000"
+            style={{
+              strokeDashoffset: `calc(1000 - (1000 * ${scrollYProgress}))`
+            }}
+          />
+          <defs>
+            <linearGradient id="arrow-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#6366F1" />
+              <stop offset="100%" stopColor="#8B5CF6" />
+            </linearGradient>
+            <marker
+              id="arrowhead"
+              markerWidth="10"
+              markerHeight="7"
+              refX="9"
+              refY="3.5"
+              orient="auto"
+            >
+              <polygon points="0 0, 10 3.5, 0 7" fill="#8B5CF6" />
+            </marker>
+          </defs>
+        </svg>
+
+        {steps.map((step, index) => (
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row items-center gap-10 ${
+              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+            }`}
+          >
+            {/* Card Content */}
+            <motion.div
+              className="bg-white rounded-2xl shadow-xl p-8 w-full md:w-1/2 flex flex-col gap-4 relative border-2 border-indigo-100"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              {/* Step indicator with arrow connector */}
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+                <motion.div
+                  className="bg-purple-100 text-purple-700 font-bold px-4 py-1 rounded-full text-sm shadow-md z-10"
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ repeat: Infinity, duration: 2 }}
+                >
+                  Step {index + 1}
+                </motion.div>
+                {/* Small arrow pointing to the card */}
+                {index !== 0 && (
+                  <div className="w-0 h-6 border-l-2 border-dashed border-purple-300"></div>
+                )}
+              </div>
+
+              <h3 className="text-2xl font-bold text-indigo-700 text-center">{step.title}</h3>
+              <p className="text-gray-600 text-center">{step.description}</p>
+
+              {/* Arrow connector at bottom */}
+              {index !== steps.length - 1 && (
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+                  <div className="w-0 h-6 border-l-2 border-dashed border-purple-300"></div>
+                  <div className="w-4 h-4 border-r-2 border-b-2 border-purple-500 transform rotate-45 -translate-y-2"></div>
                 </div>
+              )}
+            </motion.div>
 
-          
-            <div className="  border-t-[2px] border-dashed h-[1px] w-[130%] border-blackHW  mt-[55%]  xxsm:-mr-[55px] xsm:mt-[15px] md:border-t-[3px] relative  left-[27px]  min-[576px]:left-[15px] md:-left-5  md:w-[160%] min-[992px]:w-[170%] min-[1200px]:w-[177%]   min-[992px]:-left-7 min-[1200px]:-left-10"></div>
-           
-                <div className=" text-center max-[767px]:px-[30px]">
-                <button
-          className={`${
-            effect && "turnOnIn animate delayInAnimation4s delay-0"
-          }  poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn4s delay-0 overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
-          onClick={() => {
-            setEffect(true);
-          }}
-          onAnimationEnd={() => setEffect(false)}
-        >
-        2
-        </button>                    
-                </div>
-            
-            <div className="  border-t-[2px] border-dashed h-[1px]  w-[130%] border-blackHW  mt-[55%]  xxsm:-mr-[55px] xsm:mt-[15px] md:border-t-[3px] relative left-[27px]  min-[576px]:left-[15px] md:-left-5     md:w-[160%] min-[992px]:w-[170%] min-[1200px]:w-[177%]  min-[992px]:-left-7 min-[1200px]:-left-10 "></div>
-       
-                <div className=" text-center max-[767px]:px-[30px]">
-                <button
-          className={`${
-            effect && "turnOnIn animate"
-          }  poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn8s delay-0 overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
-          onClick={() => {
-            setEffect(true);
-          }}
-          onAnimationEnd={() => setEffect(false)}
-        >
-        3
-        </button>                    
+            {/* Card Image with border */}
+            <motion.div
+              className="w-full md:w-1/2 h-72 overflow-hidden rounded-2xl shadow-lg border-4 border-white"
+              initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <img
+                src={step.img}
+                alt={step.title}
+                className="object-contain w-full h-full p-4 bg-white"
+              />
+            </motion.div>
+          </div>
+        ))}
+      </div>
 
-                </div>
-            
-            <div className="  border-t-[2px] border-dashed h-[1px]  w-[130%] border-blackHW  mt-[55%]  xxsm:-mr-[55px] xsm:mt-[15px] md:border-t-[3px] relative  left-[27px]  min-[576px]:left-[15px] md:-left-5  md:w-[160%] min-[992px]:w-[170%] min-[1200px]:w-[177%]  min-[992px]:-left-7 min-[1200px]:-left-10"></div>
-            
-                <div className=" text-center max-[767px]:px-[30px]">
-                <button
-          className={`${
-            effect && "turnOnIn animate"
-          }  poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn12s delay-0 overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
-          onClick={() => {
-            setEffect(true);
-          }}
-          onAnimationEnd={() => setEffect(false)}
-        >
-        4
-        </button>                    
-
-                </div>
-          
-            <div className=" border-t-[2px] border-dashed h-[1px]  w-[130%] border-blackHW  mt-[55%]  xxsm:-mr-[55px] xsm:mt-[15px] md:border-t-[3px] relative  left-[27px]  min-[576px]:left-[15px] md:-left-5  md:w-[160%] min-[992px]:w-[170%] min-[1200px]:w-[177%]  min-[992px]:-left-7 min-[1200px]:-left-10 "></div>
-         
-                <div className=" text-center max-[767px]:px-[30px]">
-                <button
-          className={`${
-            effect && "turnOnIn animate"
-          } poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn16s overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
-          onClick={() => {
-            setEffect(true);
-          }}
-          onAnimationEnd={() => setEffect(false)}
-        >
-        5
-        </button>              
-
-                </div>
-  
-            <div className="  border-t-[2px] border-dashed h-[1px]  w-[130%] border-blackHW  mt-[55%]  xxsm:-mr-[55px] xsm:mt-[15px] md:border-t-[3px] relative  left-[27px]  min-[576px]:left-[15px] md:-left-5  md:w-[160%] min-[992px]:w-[170%] min-[1200px]:w-[177%]  min-[992px]:-left-7 min-[1200px]:-left-10  "></div>
-         
-                <div className=" text-center  max-[767px]:px-[30px]">
-<button
-          className={`${
-            effect && "turnOnIn animate"
-          }  poppins font-light w-[25px] h-[25px] text-center inline-block text-[10px]/[20px] rounded-full  mb-3 relative z-[1] border-[2px] border-solid border-black outline-borderHW2  outline-[1px] turnOnIn20s overflow-visible xsm:w-[30px] xms:h-[30px] xsm:text-[10px]/[25px] lg:text-[15px]/[25px] hiwButton`}
-          onClick={() => {
-            setEffect(true);
-          }}
-          onAnimationEnd={() => setEffect(false)}
-        >
-        6
-        </button>
-        </div>
-        </div>
-    </div>
-    <div className=" container !w-full md:px-4 md:mx-auto grid grid-cols-6 relative min-[576px]:right-3 md:right-10 min-[992px]:right-14  ">
-        <h5 className=" poppins mx-2 mb-4 text-[9px] text-[#263a4f] xxsm:mx-3 xsm:text-[10px]  min-[580px]:mx-[15px] min-[580px]:text-[12px] md:mx-[30px] md:text-[13px] min-[992px]:mx-[15px] min-[992px]:text-[15px] lg:text-[0.83rem] ">Raise a Request</h5>
-        <h5 className=" poppins mx-2 mb-4 text-[9px] text-[#263a4f] xxsm:mx-3 xsm:text-[10px]  min-[580px]:mx-[15px] min-[580px]:text-[12px] md:mx-[30px] md:text-[13px] min-[992px]:mx-[15px] min-[992px]:text-[15px] lg:text-[0.83rem] ">Meet Our Experts</h5>
-        <h5 className=" poppins mx-2 mb-4 text-[9px] text-[#263a4f] xxsm:mx-3 xsm:text-[10px]  min-[580px]:mx-[15px] min-[580px]:text-[12px] md:mx-[30px] md:text-[13px] min-[992px]:mx-[15px] min-[992px]:text-[15px] lg:text-[0.83rem] ">Book with us</h5>
-        <h5 className=" poppins mx-2 mb-4 text-[9px] text-[#263a4f] xxsm:mx-3 xsm:text-[10px]  min-[580px]:mx-[15px] min-[580px]:text-[12px] md:mx-[30px] md:text-[13px] min-[992px]:mx-[15px] min-[992px]:text-[15px] lg:text-[0.83rem] ">Receive Designs</h5>
-        <h5 className=" poppins mx-2 mb-4 text-[9px] text-[#263a4f] xxsm:mx-3 xsm:text-[10px]  min-[580px]:mx-[15px] min-[580px]:text-[12px] md:mx-[30px] md:text-[13px] min-[992px]:mx-[15px] min-[992px]:text-[15px] lg:text-[0.83rem] "> Track &amp; Transact</h5>
-        <h5 className=" poppins mx-2 mb-4 text-[9px] text-[#263a4f] xxsm:mx-3 xsm:text-[10px]  min-[580px]:mx-[15px] min-[580px]:text-[12px] md:mx-[30px] md:text-[13px] min-[992px]:mx-[15px] min-[992px]:text-[15px] lg:text-[0.83rem] ">Settle In</h5>
-
-
-
-    </div>
-   
-        <div className=" px-[15px] w-full  mx-auto overflow-hidden h-[320px] text-center  ">
-            
-            <div className=" noneToBlock  pb-20 mx-auto w-fit ">
-                <img src={HIWImg1}/>
-            </div>
-            <div className=" noneToBlock4s   pb-20 mx-auto w-fit">
-                <img src={HIWImg2}/>           
-            </div>
-            <div className="   noneToBlock8s   pb-20 mx-auto w-fit">
-                <img src={HIWImg3}/>
-            </div>
-            <div className=" noneToBlock12s   pb-20 mx-auto w-fit">
-                <img src={HIWImg4}/>
-            </div>
-            <div className="  noneToBlock16s  s pb-20 mx-auto w-fit">
-                <img src={HIWImg5}/>
-            </div>
-            <div className="  noneToBlock20s  pb-20 mx-auto w-fit">
-                <img src={HIWImg6}/>
-            </div>
-     
-        <div></div>
-    </div>
-<div className="h-[162px] overflow-hidden">
-    <div className="p-[1.25rem] mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px]  noneToBlock  ">
-        <div>
-            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate  ">
-                <h3 className="poppins text-base md:text-[20px]/[]">01 Raise a Request</h3>
-                <p className="source-sans text-xs"> Raise a service request or call us at +91-9161003434. Our technical expert will get in touch
-                    with you.<br/>
-                    <a  href="/lets-build.html">Let's build</a>
-            </p></div>
-            <p></p>
-        </div>
-    </div>
-    <div className="p-[1.25rem]  mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px] noneToBlock4s  ">
-        <div>
-            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate ">
-                <h3 className="poppins text-base md:text-[20px]/[]">02 Meet our Expert</h3>
-                <p  className="source-sans text-xs">
-                    Our experts visit you to take all the requirements and submit exhaustive specifications.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div className="p-[1.25rem]  mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px]  noneToBlock8s ">
-        <div>
-            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate ">
-                <h3  className="poppins text-base md:text-[20px]/[]">03 Book with Us</h3>
-                <p className="source-sans text-xs"> Good to go. You pay 5% of the estimated project cost as Booking Amount.</p>
-            </div>
-        </div>
-        
-    </div>
-    <div className="p-[1.25rem]  mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px]  noneToBlock12s  ">
-        <div>
-            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate ">
-                <h3  className="poppins text-base md:text-[20px]/[]">04 Receive designs</h3>
-                <p className="source-sans text-xs"> Our Professional will provide exhaustive drawings and designs till the customer is fully
-                    satisfied.
-                    Designs include floor plans, 3D elevations, electrical, plumbing and structural designs.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div className="p-[1.25rem]  mb-20 w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px]  noneToBlock16s  ">
-        <div>
-            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate ">
-                <h3  className="poppins text-base md:text-[20px]/[]">05 Track &amp; Transact</h3>
-                <p className="source-sans text-xs"> To ensure absolute trust, BrickMason provides an escrow model where you transfer the amount for
-                    stage of the project. You can track the project through our customer application.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div className="p-[1.25rem]  w-[] bg-white mx-[1.25rem] xsm:mx-[50px] xsm:mt-10 min-[580px]:mx-[100px] min-[992px]:mx-20  lg:mx-[300px]  xl:mx-[400px] lg:mt-[50px]  noneToBlock20s  ">
-        <div>
-            <div className=" border-l-[#636262da] border-solid border-l-[1px] pl-[10px] text-left fadeUp animate ">
-                <h3  className="poppins text-base md:text-[20px]/[]">06 Settle In</h3>
-                <p className="source-sans text-xs">We make sure you are well settled in your new home. Our journey together doesn't end here. We
-                    provide
-                    5 years of warranty.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-    <div className="flex justify-center content-center">        
-        <div className="inner-layer  bg-orangebrick w-28 h-10 flex justify-center content-center text-center rounded mt-[30px] " >          
-            <a href="#" className="no-underline text-white text-sm tracking-normal font-semibold uppercase inline-block leading-10">Let's Build</a>
-        </div>
-    </div>
-    
-</section>;
+      {/* Floating Background Circles */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute w-40 h-40 bg-purple-200 rounded-full opacity-30"
+          animate={{ y: [0, 50, 0], x: [0, 20, 0] }}
+          transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-0 right-0 w-60 h-60 bg-blue-200 rounded-full opacity-20"
+          animate={{ y: [0, -50, 0], x: [0, -20, 0] }}
+          transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
+        />
+      </div>
+    </section>
+  );
 }
-
-
-export default HowItWorks;
