@@ -4,7 +4,7 @@ function Card(props) {
   return (
     // <div className="shadow-lg border ml-2 col-lg-3 col-sm-6 shadow-[#000] hover:shadow-[#e3a773c6]">
 
-    <div className="max-w-sm p-6 m-2 mx-4 bg-[#EDEDED] border border-gray-200 md:mx-2 lg:mx-4  shadow-[0px_0px_10px_0px_#6c757d57]  dark:border-[#fff] hover:shadow-[0px_0px_4px_0px_#d98e7d] ">
+    <div className="bg-white/70 backdrop-blur-md rounded-2xl shadow-lg border border-orange-100 p-6 transition-transform hover:scale-105 hover:shadow-xl duration-300 mx-4 z-10">
       <a>
         <div>
           <FontAwesomeIcon

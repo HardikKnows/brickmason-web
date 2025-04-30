@@ -4,8 +4,10 @@ import HowItWorks from "../hero/HowItWorks";
 import OurServices from "../hero/OurServices";
 import ExplorepPlans from "../hero/PackageTable.jsx";
 import Projects from "../hero/Projects.jsx";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ProjectDetails from '../hero/ProjectDetails.js';
+import ProjectDetails from './ProjectDetails.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ContactForm from "../common/ContactForm.jsx";
+
 
 
 import Vibes from "../hero/Vibes";
@@ -24,9 +26,9 @@ function Home() {
     "/car-images/slider4.png",
   ];
   const locations = [
-    'UP, Sultanpur',
-    'UP, Amethi',
-    'UP, Lucknow',
+    'Sultanpur , Uttar pradesh',
+    'Amethi , Uttar pradesh',
+    'Lucknow , Uttar pradesh',
   ];
   const captions = [
     {
@@ -57,7 +59,8 @@ function Home() {
       <Referral/>*/}
       <Promotional/>
       <Projects />
-      <Testimonials/>
+      <ContactForm/>
+
     {/*<ProjectsSection projects={projectData} />*/}
       <Footer/>
     

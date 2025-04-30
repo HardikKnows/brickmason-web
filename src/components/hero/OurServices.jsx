@@ -60,7 +60,8 @@ const OurServices = () => {
   };
 
   return (
-    <section className="py-16 bg-white relative z-0">
+
+    <section id='our-services' className="relative overflow-hidden bg-gradient-to-b from-blue-50 via-purple-50 to-pink-50 py-16">
       <div className={`max-w-6xl mx-auto px-4 ${activeIndex !== null ? 'blur-sm pointer-events-none' : ''}`}>
         <h2 className="text-3xl font-bold mb-4 text-center">Our Services</h2>
         <p className="text-gray-600 max-w-3xl mx-auto mb-12 text-center">
@@ -71,7 +72,7 @@ const OurServices = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="rounded-xl p-6 shadow-md border bg-white text-gray-800"
+              className="rounded-xl p-6 shadow-md border bg-white text-gray-800 z-10"
             >
               <img src={service.icon} alt="" className="w-14 h-14 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
@@ -119,6 +120,19 @@ const OurServices = () => {
           </motion.div>
         )}
       </AnimatePresence>
+       {/* Floating Background Circles */}
+       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute w-40 h-40 bg-purple-200 rounded-full opacity-30"
+          animate={{ y: [0, 50, 0], x: [0, 20, 0] }}
+          transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-0 right-0 w-60 h-60 bg-blue-200 rounded-full opacity-20"
+          animate={{ y: [0, -50, 0], x: [0, -20, 0] }}
+          transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
+        />
+      </div>
     </section>
   );
 };

@@ -4,6 +4,10 @@
 * { 
   box-sizing: border-box;
  } 
+ html {
+  scroll-behavior: smooth;
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -43,11 +47,6 @@
     transform: rotate(360deg);
   }
 }
-.header {
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-}
 
 .container {
   display: flex;
@@ -68,66 +67,15 @@
   height: 50px;
 }
 
-.nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
 
-.nav ul li {
-  position: relative;
-}
 
-.nav ul li a {
-  text-decoration: none;
-  color: #333;
-  padding: 10px 15px;
-  display: block;
-}
 
-.nav ul li a:hover {
-  color: #007bff;
-}
 
-/* Dropdown Menu */
-.dropdown {
-  position: relative;
-}
 
-.dropdown-menu {
-  display: none; /* Hide dropdown by default */
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1000;
-  min-width: 200px;
-  padding: 0;
-  list-style: none;
-}
 
-.dropdown-menu li {
-  display: none; /* Ensure each item appears as a block inside the dropdown */
-}
 
-.dropdown-menu li a {
-  display: block;
-  padding: 10px 15px;
-  color: #333;
-  text-decoration: none;
-  white-space: nowrap;
-}
 
-.dropdown-menu li a:hover {
-  background-color: #f1f1f1;
-}
 
-/* Show dropdown only on hover */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
 
 
 .cta .cta-button {
@@ -348,16 +296,32 @@
   }
 }
 /* Example CSS */
-/* Custom Swiper Navigation Arrows */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #3b82f6; /* Blue color */
+  color: #000;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  z-index: 10;
 }
 
-/* Custom Swiper Pagination Bullets */
-.swiper-pagination-bullet {
-  background: #3b82f6; /* Blue color */
+.swiper-button-next {
+  right: -30px; /* Move arrow outside to the right */
 }
+
+.swiper-button-prev {
+  left: -30px; /* Move arrow outside to the left */
+}
+.swiper-slide {
+  opacity: 1 !important;
+  transition: opacity 0.3s ease;
+}
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 20px;
+}
+
 .project-card {
   transition: transform 0.3s, box-shadow 0.3s;
 }

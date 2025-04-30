@@ -26,7 +26,7 @@ export default function HowItWorks() {
   });
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 via-purple-50 to-pink-50 py-20 min-h-screen">
+    <section id='how-it-works' className="relative overflow-hidden bg-gradient-to-b from-blue-50 via-purple-50 to-pink-50 py-20 min-h-screen">
       {/* Section Heading */}
       <div className="text-center mb-20">
         <h2 className="text-4xl md:text-5xl font-bold text-indigo-700 mb-4">How It Works</h2>

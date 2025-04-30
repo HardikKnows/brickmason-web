@@ -6,11 +6,10 @@ import HeaderMobile from "./components/header/HeaderMobile";
 import FooterUtils from "./components/footer/FooterUtils";
 import Loader from "./components/common/Loader";
 import Home from "./components/pages/Home";
-import ProjectDetails from './components/hero/ProjectDetails'; // Import the ProjectDetails component
+import ContactPage from "./components/pages/ContactPage";
+import ProjectDetails from './components/pages/ProjectDetails'; // Import the ProjectDetails component
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -18,13 +17,11 @@ function App() {
       {/* <Loader /> */}
       <HeaderMobile />
       <HeaderWindow />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} /> {/* Home page with project section */}
-          <Route path="/projects/:id" element={<ProjectDetails />} /> {/* Details page */}
-        </Routes>
-    </Router>
-     
+      <Routes> {/* No need for Router here */}
+        <Route path="/" element={<Home />} /> {/* Home page with project section */}
+        <Route path="/projects/:id" element={<ProjectDetails />} /> {/* Details page */}
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
       <FooterUtils />
       <FooterTabs />
     </div>

@@ -1,20 +1,15 @@
 import React from "react";
-import "./index.css";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";  // Only here
 import App from "./App";
-import { createRoot } from 'react-dom/client'; // Import createRoot from react-dom/client
+import "./index.css"
 
+const rootElement = document.getElementById("root");
 
-// Get the root element
-const container = document.getElementById('root');
-
-// Create a root
-const root = createRoot(container);
-
-// Render your app
-root.render(
-
+ReactDOM.createRoot(rootElement).render(
+  <React.StrictMode>
+    <BrowserRouter> {/* Single BrowserRouter wrapping the entire app */}
       <App />
-
+    </BrowserRouter>
+  </React.StrictMode>
 );
-
-

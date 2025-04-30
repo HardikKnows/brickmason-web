@@ -10,227 +10,72 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 
 function FooterTabs() {
   return (
-    <div className="sticky bottom-0  py-2 bg-[#9E9E9E] pb-3 lg:hidden">
-      <ul class="list-none grid grid-cols-5 px-3">
+    <div className="sticky bottom-0 z-50 bg-[#f5f5f5] border-t border-gray-300 py-2 lg:hidden">
+      <ul className="grid grid-cols-5 gap-1 text-center">
         <li>
-          <a href="#" class="flex flex-col text-[#212121] hover:text-[#FAFAFA]">
-            <div>
-              <FontAwesomeIcon icon={faHouse} className="pb-2 text-xl" />
-            </div>
-            <p className="font-sans text-xs/5 whitespace-nowrap tracking-tighter">
-              Home
-            </p>
+          <a href="#" className="no-underline flex flex-col items-center text-gray-700 hover:text-black transition duration-150">
+            <FontAwesomeIcon icon={faHouse} className="text-lg mb-1" />
+            <span className="text-xs font-medium">Home</span>
           </a>
         </li>
         <li>
-          <a href="#" class="flex flex-col text-[#212121] hover:text-[#FAFAFA]">
-            <div>
-              <FontAwesomeIcon
-                icon={faBuildingShield}
-                className="pb-2 text-xl"
-              />
+          <a href="#our-projects" className="no-underline flex flex-col items-center text-gray-700 hover:text-black transition duration-150">
+            <FontAwesomeIcon icon={faBuildingShield} className="text-lg mb-1" />
+            <span className="text-xs font-medium">Projects</span>
+          </a>
+        </li>
+        <li className="relative -mt-6">
+          <a href="#" className="no-underline flex flex-col items-center text-gray-700">
+            <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#f5f5f5] rounded-full p-3 shadow-md">
+              <FontAwesomeIcon icon={faHammer} className="text-2xl text-[#212121]" />
             </div>
-            <p className="font-sans text-xs/5 whitespace-nowrap tracking-tighter">
-              Our Projects
-            </p>
+            <span className="pt-10 text-xs font-medium">Let's Build</span>
           </a>
         </li>
         <li>
-          <a
-            href="#"
-            class="flex flex-col justify-center text-[#212121] hover:text-[#FAFAFA]"
-          >
-            <div className=" ">
-              <FontAwesomeIcon
-                icon={faHammer}
-                className=" text-[#1d1a12] pb-2 text-xl"
-              />
-            </div>
-            <div className=" flex justify-center">
-              <div className="absolute -top-5 rounded-full shadow-md shadow- bg-[#9E9E9E] h-14 w-14 z-10">
-                <FontAwesomeIcon
-                  icon={faHammer}
-                  className=" text-[#212121] text-3xl pt-3 hover:text-[#FAFAFA] "
-                />
-              </div>
-            </div>
-            <p className="justify-bottom font-sans align-bottom text-xs/5 whitespace-nowrap tracking-tighter">
-              Let's Build
-            </p>
+          <a href="#" className="no-underline flex flex-col items-center text-gray-700 hover:text-black transition duration-150">
+            <FontAwesomeIcon icon={faIndianRupee} className="text-lg mb-1" />
+            <span className="text-xs font-medium">Estimator</span>
           </a>
         </li>
         <li>
-          <a href="#" class="flex flex-col text-[#212121] hover:text-[#FAFAFA]">
-            <div>
-              <FontAwesomeIcon icon={faIndianRupee} className="pb-2 text-xl" />
-            </div>
-            <p className="font-sans text-xs/5 whitespace-nowrap tracking-tighter">
-              Cost Estimator
-            </p>
-          </a>
-        </li>
-        <li>
-          <Menu as="a" className="inline-block text-[#212121]  hover:text-[#FAFAFA]">
-            <div>
-              <MenuButton className=" justify-center xl:text-lg ">
-                <div>
-                  <FontAwesomeIcon icon={faBars} className="text-xl pb-2" />
-                </div>
-                <p className="font-sans text-xs/5 whitespace-nowrap tracking-tighter">
-                  More
-                </p>
-              </MenuButton>
-            </div>
+          <Menu as="div" className="relative">
+            <MenuButton className="no-underline flex flex-col items-center text-gray-700 hover:text-black transition duration-150">
+              <FontAwesomeIcon icon={faBars} className="text-lg mb-1" />
+              <span className="text-xs font-medium">More</span>
+            </MenuButton>
 
             <MenuItems
-              transition
-              className="absolute left-0 bottom-20 text-left max-h-screen mt-1 font-semibold  w-full origin-top-right bg-white  ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+              className="fixed bottom-14 left-0 w-full p-2 bg-white border-t border-gray-300 rounded-t-xl shadow-lg z-[999] transform transition-all duration-200 ease-out
+             data-[leave]:opacity-0 data-[leave]:translate-y-2 data-[leave]:scale-95
+             data-[enter]:opacity-100 data-[enter]:translate-y-0 data-[enter]:scale-100"
             >
-              <div className="py-1">
-              <MenuItem>
-                  {({ focus }) => (
+              {[
+                { name: "Home", href: "#" },
+                { name: "How it Works", href: "#how-it-works" },
+                { name: "Our Projects", href: "#our-projects" },
+                { name: "Cost Estimator", href: "#cost-estimator" },
+                { name: "Material Estimator", href: "#material-estimator" },
+                { name: "Floor Plans", href: "#floor-plans" },
+                { name: "FAQs", href: "#faqs" },
+                { name: "About Us", href: "#about-us" },
+                { name: "Contact Us", href: "#contact-us" },
+                { name: "Reviews", href: "#reviews" },
+                { name: "Our Team", href: "#our-team" },
+              ].map((item) => (
+                <MenuItem key={item.name}>
+                  {({ active }) => (
                     <a
-                      href="#"
-                      className={classNames(
-                        focus ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
+                      href={item.href}
+                      className={`no-underline block px-4 py-2 text-sm rounded ${
+                        active ? "bg-gray-100 text-black" : "text-gray-700"
+                      }`}
                     >
-                      Home
+                      {item.name}
                     </a>
                   )}
                 </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        focus ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      How it Works
-                    </a>
-                  )}
-                </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        focus ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Our Projects
-                    </a>
-                  )}
-                </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        focus ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Cost Estimator
-                    </a>
-                  )}
-                </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        focus ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Material Estimator
-                    </a>
-                  )}
-                </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        focus ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Floor Plans
-                    </a>
-                  )}
-                </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        focus ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      FAQs
-                    </a>
-                  )}
-                </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        focus ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      About Us
-                    </a>
-                  )}
-                </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        focus ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Contact Us
-                    </a>
-                  )}
-                </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        focus ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Reviews
-                    </a>
-                  )}
-                </MenuItem>
-                <MenuItem>
-                  {({ focus }) => (
-                    <a
-                      href="#"
-                      className={classNames(
-                        focus ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block px-4 py-2 text-sm"
-                      )}
-                    >
-                      Our Team
-                    </a>
-                  )}
-                </MenuItem>
-              </div>
+              ))}
             </MenuItems>
           </Menu>
         </li>
@@ -239,7 +84,4 @@ function FooterTabs() {
   );
 }
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 export default FooterTabs;

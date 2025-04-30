@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 const packages = {
   structure: {
     name: "Structure",
@@ -293,15 +293,15 @@ const packages = {
 };
 
 const PackageTable = () => {
-  const [expandedRow, setExpandedRow] = useState(null); // Track the expanded row
-  const [selectedPlan, setSelectedPlan] = useState("budget"); // Track the selected plan
+  const [expandedRow, setExpandedRow] = useState(null);
+  const [selectedPlan, setSelectedPlan] = useState("budget");
 
   const toggleRow = (rowId) => {
-    setExpandedRow((prev) => (prev === rowId ? null : rowId)); // Toggle expanded row
+    setExpandedRow((prev) => (prev === rowId ? null : rowId));
   };
 
   const handlePlanClick = (planId) => {
-    setSelectedPlan(planId); // Update the selected plan
+    setSelectedPlan(planId);
   };
 
   const rows = [
@@ -319,52 +319,95 @@ const PackageTable = () => {
   ];
 
   return (
-    <div className="bg-[#D6CBBF]">
+    <section className="relative overflow-hidden bg-gradient-to-b from-yellow-50 via-orange-50 to-rose-50 py-10 min-h-screen">
       <div className="container mx-auto p-4 font-sans !flex-col">
-        {/* Heading */}
-        <h2 className="text-3xl font-bold text-center mb-8">
+        <h2 className="text-xl md:text-3xl font-bold text-center mb-6 md:mb-8">
           FIND THE BEST HOME CONSTRUCTION PACKAGES
         </h2>
-
-        {/* Paragraph */}
-        <p className="text-center text-gray-600 mb-8">
+        <p className="text-center text-gray-600 mb-6 md:mb-8 text-sm md:text-base">
           We are committed to building a sustainable future by fostering a collaborative spirit that creates exceptional experiences, balanced relationships, and community-built environments. Building isn't just a job. It's our passion. With every project we undertake, we set the bar high and provide the best in the industry.
         </p>
 
-        {/* Package Table */}
-        <div className="overflow-x-auto mb-8">
-          <table className="min-w-full bg-white border border-gray-200">
+        {/* Mobile package selector */}
+        <div className="mb-4 block md:hidden">
+          <label htmlFor="packageSelect" className="block text-sm font-medium text-gray-700 mb-1">
+            Select Package
+          </label>
+          <select
+            id="packageSelect"
+            value={selectedPlan}
+            onChange={(e) => handlePlanClick(e.target.value)}
+            className="block w-full border border-gray-300 rounded-md p-2 text-sm"
+          >
+            {Object.keys(packages).map((planId) => (
+              <option key={planId} value={planId}>
+                {packages[planId].name} - {packages[planId].price}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Mobile version */}
+        <div className="md:hidden space-y-4">
+          {rows.map((row) => (
+            <div
+              key={row.id}
+              className={`border rounded-md shadow-sm p-4 ${expandedRow === row.id ? 'bg-gray-50' : 'bg-white'}`}
+            >
+              <div className="flex justify-between items-center">
+                <span className="font-medium text-sm">{row.label}</span>
+                <button
+                  onClick={() => toggleRow(row.id)}
+                  className="text-blue-500 hover:text-blue-700"
+                >
+                  {expandedRow === row.id ? <FaMinus /> : <FaPlus />}
+                </button>
+              </div>
+              {expandedRow === row.id && (
+                <div className="mt-2 text-sm text-gray-700">
+                  {Object.entries(packages[selectedPlan].features[row.id]).map(([key, value]) => (
+                    <div key={key} className="mb-1">
+                      <strong>{key}:</strong> {value}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop table version */}
+        <div className="overflow-x-auto hidden md:block mb-8 text-sm">
+          <table className="min-w-full bg-white border border-gray-200 text-sm">
             <thead>
               <tr className="bg-gray-100">
-                <th className="py-3 px-4 border-b text-left text-white bg-gray-700">Features</th>
+                <th className="py-2 px-2 border-b text-left text-white bg-gray-700 text-xs">Features</th>
                 {Object.keys(packages).map((planId) => (
-                  <th
-                    key={planId}
-                    className={`py-3 px-4 border-b text-center text-white bg-black cursor-pointer ${
-                      selectedPlan === planId ? "!bg-[#D2042D]" : ""
-                    }`}
-                    onClick={() => handlePlanClick(planId)}
-                  >
-                    {packages[planId].name} - {packages[planId].price}
-                  </th>
+                 <th
+                 key={planId}
+                 className={`py-2 px-2 border-b text-center text-white text-xs cursor-pointer ${
+                   selectedPlan === planId ? 'bg-[#D2042D]' : 'bg-black'
+                 }`}
+                 onClick={() => handlePlanClick(planId)}
+               >
+                 {packages[planId].name} - {packages[planId].price}
+               </th>
+               
                 ))}
-                <th className="py-3 px-4 border-b text-right text-white bg-gray-700">Actions</th> {/* New column for icons */}
+                <th className="py-2 px-2 border-b text-right text-white bg-gray-700 text-xs">Actions</th>
               </tr>
             </thead>
             <tbody>
               {rows.map((row) => (
                 <React.Fragment key={row.id}>
                   <tr>
-                    <td className="py-3 px-4 border-b text-gray-700">{row.label}</td>
+                    <td className="py-2 px-2 border-b text-gray-700 text-xs">{row.label}</td>
                     {Object.keys(packages).map((planId) => (
-                      <td
-                        key={planId}
-                        className={`py-3 px-4 border-b text-center`}
-                      >
-                        {/* No "+" sign here */}
+                      <td key={planId} className="py-2 px-2 border-b text-center text-xs">
+                        {/* no content */}
                       </td>
                     ))}
-                    <td className="py-3 px-4 border-b text-right">
+                    <td className="py-2 px-2 border-b text-right">
                       <button
                         onClick={() => toggleRow(row.id)}
                         className="text-blue-500 hover:text-blue-700"
@@ -375,10 +418,10 @@ const PackageTable = () => {
                   </tr>
                   {expandedRow === row.id && (
                     <tr>
-                      <td colSpan={Object.keys(packages).length + 2} className="py-3 px-4 border-b bg-gray-50">
-                        <div className="pl-8">
+                      <td colSpan={Object.keys(packages).length + 2} className="py-2 px-2 border-b bg-gray-50 text-xs">
+                        <div className="pl-4">
                           {Object.entries(packages[selectedPlan].features[row.id]).map(([key, value]) => (
-                            <div key={key} className="text-gray-600 mb-2">
+                            <div key={key} className="text-gray-600 mb-1">
                               <strong>{key}:</strong> {value}
                             </div>
                           ))}
@@ -392,14 +435,19 @@ const PackageTable = () => {
           </table>
         </div>
 
-        {/* CTA Button */}
         <div className="text-center">
-          <button className="px-6 py-3 bg-[#D2042D] text-white rounded-lg hover:bg-red-700 transition-colors">
+          <Link to="/contact" className="px-4 py-2 text-sm bg-[#D2042D] text-white rounded hover:bg-red-700 hover:no-underline transition-colors">
             GET FREE QUOTE
-          </button>
+          </Link>
         </div>
       </div>
-    </div>
+
+      {/* Decorative Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute w-32 h-32 bg-orange-200 rounded-full opacity-30 top-10 left-10 animate-pulse" />
+        <div className="absolute w-24 h-24 bg-yellow-200 rounded-full opacity-20 bottom-0 right-0 animate-[bounce_6s_ease-in-out_infinite]" />
+      </div>
+    </section>
   );
 };
 
