@@ -4,7 +4,7 @@ import { faClock, faCreditCard, faFileLines } from "@fortawesome/free-regular-sv
 
 function WhyUs() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-yellow-50 via-orange-50 to-rose-50 py-20 min-h-screen">
+    <section className="relative overflow-hidden bg-gradient-to-b from-pink-50 via-purple-50 to-indigo-100 py-20 min-h-screen">
       <div className="mx-auto px-4 xl:px-36">
         {/* Section Heading */}
         <div className="text-center mb-16">

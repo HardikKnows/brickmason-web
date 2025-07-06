@@ -51,15 +51,18 @@ function Home() {
   return (
     <div>
       <Carousel images={images} locations={locations} captions={captions} autoSlide={true} slideInterval={4000}/>
-      <WhyUs/>
-      <HowItWorks/>
+      <ContactForm/>
       <OurServices/>
       <ExplorepPlans/>
+      <HowItWorks/>
+     
+   
       {/*<Vibes/>
       <Referral/>*/}
       <Promotional/>
       <Projects />
-      <ContactForm/>
+      <WhyUs/>
+     
 
     {/*<ProjectsSection projects={projectData} />*/}
       <Footer/>

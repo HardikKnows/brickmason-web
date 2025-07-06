@@ -51,7 +51,7 @@ const projects = [
 const Projects = () => {
   const navigate = useNavigate();
   return (
-    <section id='our-projects' className="relative overflow-hidden bg-gradient-to-b from-yellow-50 via-orange-50 to-rose-50 py-10">
+    <section id='our-projects' className="relative overflow-hidden bg-gradient-to-bl from-blue-50 via-white to-indigo-50 py-10">
       <div className="flex-col justify-center align-middle " >
       <h1 className="text-3xl font-bold text-center mb-8 ">Our Projects</h1>
       <p className=' text-center'>From a couple to Large Indian Family, we have houses built with emotions for everyone</p>
