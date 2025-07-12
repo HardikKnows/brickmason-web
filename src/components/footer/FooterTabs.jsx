@@ -7,73 +7,95 @@ import {
   faIndianRupee,
 } from "@fortawesome/free-solid-svg-icons";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { Link } from "react-router-dom";
 
 function FooterTabs() {
   return (
     <div className="sticky bottom-0 z-50 bg-[#f5f5f5] border-t border-gray-300 py-2 lg:hidden">
-      <ul className="grid grid-cols-5 gap-1 text-center">
-        <li>
-          <a href="#" className="no-underline flex flex-col items-center text-gray-700 hover:text-black transition duration-150">
-            <FontAwesomeIcon icon={faHouse} className="text-lg mb-1" />
-            <span className="text-xs font-medium">Home</span>
+      <ul className="grid grid-cols-5 text-center w-full">
+        {/* Home */}
+        <li className="w-full flex flex-col items-center justify-center">
+          <Link
+            to="/"
+            className="flex flex-col items-center justify-center text-gray-700 hover:text-black transition duration-150"
+          >
+            <FontAwesomeIcon icon={faHouse} className="text-xl mb-1" />
+            <span className="text-[11px] font-medium leading-none">Home</span>
+          </Link>
+        </li>
+
+        {/* Projects */}
+        <li className="w-full flex flex-col items-center justify-center">
+          <a
+            href="#our-projects"
+            className="flex flex-col items-center justify-center text-gray-700 hover:text-black transition duration-150"
+          >
+            <FontAwesomeIcon icon={faBuildingShield} className="text-xl mb-1" />
+            <span className="text-[11px] font-medium leading-none">Projects</span>
           </a>
         </li>
-        <li>
-          <a href="#our-projects" className="no-underline flex flex-col items-center text-gray-700 hover:text-black transition duration-150">
-            <FontAwesomeIcon icon={faBuildingShield} className="text-lg mb-1" />
-            <span className="text-xs font-medium">Projects</span>
-          </a>
+
+        {/* Let's Build (FAB Style) */}
+        <li className="w-full flex flex-col items-center justify-end relative">
+          <Link to="/contact" className="absolute -top-10 bg-[#f5f5f5] rounded-full p-3 shadow-md z-10">
+            <FontAwesomeIcon icon={faHammer} className="text-2xl text-[#212121]" />
+          </Link>
+          <span className="text-[11px] font-medium leading-none pt-6">Let's Build</span>
         </li>
-        <li className="relative -mt-6">
-          <a href="#" className="no-underline flex flex-col items-center text-gray-700">
-            <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-[#f5f5f5] rounded-full p-3 shadow-md">
-              <FontAwesomeIcon icon={faHammer} className="text-2xl text-[#212121]" />
-            </div>
-            <span className="pt-10 text-xs font-medium">Let's Build</span>
-          </a>
+
+        {/* Estimator */}
+        <li className="w-full flex flex-col items-center justify-center">
+          <Link
+            to="/UnderCons"
+            className="flex flex-col items-center justify-center text-gray-700 hover:text-black transition duration-150"
+          >
+            <FontAwesomeIcon icon={faIndianRupee} className="text-xl mb-1" />
+            <span className="text-[11px] font-medium leading-none">Estimator</span>
+          </Link>
         </li>
-        <li>
-          <a href="#" className="no-underline flex flex-col items-center text-gray-700 hover:text-black transition duration-150">
-            <FontAwesomeIcon icon={faIndianRupee} className="text-lg mb-1" />
-            <span className="text-xs font-medium">Estimator</span>
-          </a>
-        </li>
-        <li>
+
+        {/* More Menu */}
+        <li className="w-full flex flex-col items-center justify-center">
           <Menu as="div" className="relative">
-            <MenuButton className="no-underline flex flex-col items-center text-gray-700 hover:text-black transition duration-150">
-              <FontAwesomeIcon icon={faBars} className="text-lg mb-1" />
-              <span className="text-xs font-medium">More</span>
+            <MenuButton className="flex flex-col items-center justify-center text-gray-700 hover:text-black transition duration-150">
+              <FontAwesomeIcon icon={faBars} className="text-xl mb-1" />
+              <span className="text-[11px] font-medium leading-none">More</span>
             </MenuButton>
 
             <MenuItems
-              className="fixed bottom-14 left-0 w-full p-2 bg-white border-t border-gray-300 rounded-t-xl shadow-lg z-[999] transform transition-all duration-200 ease-out
-             data-[leave]:opacity-0 data-[leave]:translate-y-2 data-[leave]:scale-95
-             data-[enter]:opacity-100 data-[enter]:translate-y-0 data-[enter]:scale-100"
+              className="fixed bottom-14 left-0 w-full px-6 pb-4 space-y-4 bg-white border-t border-gray-300 rounded-t-xl shadow-lg z-[999] text-[15px] tracking-wide"
             >
               {[
-                { name: "Home", href: "#" },
+                { name: "Home", to: "/" },
                 { name: "How it Works", href: "#how-it-works" },
                 { name: "Our Projects", href: "#our-projects" },
-                { name: "Cost Estimator", href: "#cost-estimator" },
-                { name: "Material Estimator", href: "#material-estimator" },
-                { name: "Floor Plans", href: "#floor-plans" },
-                { name: "FAQs", href: "#faqs" },
-                { name: "About Us", href: "#about-us" },
-                { name: "Contact Us", href: "#contact-us" },
-                { name: "Reviews", href: "#reviews" },
-                { name: "Our Team", href: "#our-team" },
+                { name: "Cost Estimator", to: "/UnderCons" },
+                { name: "Material Estimator", to: "/UnderCons" },
+                { name: "Floor Plans", to: "/UnderCons" },
+                { name: "FAQs", to: "/UnderCons" },
+                { name: "About Us", to: "/UnderCons" },
+                { name: "Contact Us", to: "/contact" },
+                { name: "Reviews", to: "/UnderCons" },
+                { name: "Our Team", to: "/UnderCons" },
               ].map((item) => (
                 <MenuItem key={item.name}>
-                  {({ active }) => (
-                    <a
-                      href={item.href}
-                      className={`no-underline block px-4 py-2 text-sm rounded ${
-                        active ? "bg-gray-100 text-black" : "text-gray-700"
-                      }`}
-                    >
-                      {item.name}
-                    </a>
-                  )}
+                  {({ active }) =>
+                    item.to ? (
+                      <Link
+                        to={item.to}
+                        className="block text-gray-800 font-medium hover:text-[#D2042D] transition no-underline"
+                      >
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.href}
+                        className="block text-gray-800 font-medium hover:text-[#D2042D] transition no-underline"
+                      >
+                        {item.name}
+                      </a>
+                    )
+                  }
                 </MenuItem>
               ))}
             </MenuItems>
