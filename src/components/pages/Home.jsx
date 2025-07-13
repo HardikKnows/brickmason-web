@@ -3,6 +3,7 @@ import Carousel from "../hero/Carousel";
 import HowItWorks from "../hero/HowItWorks";
 import OurServices from "../hero/OurServices";
 import ExplorepPlans from "../hero/PackageTable.jsx";
+import Banner from "../hero/Banner.jsx";
 import Projects from "../hero/Projects.jsx";
 import ProjectDetails from './ProjectDetails.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -50,7 +51,8 @@ function Home() {
 
   return (
     <div>
-      <Carousel images={images} locations={locations} captions={captions} autoSlide={true} slideInterval={4000}/>
+      <Banner/>
+      {/*<Carousel images={images} locations={locations} captions={captions} autoSlide={true} slideInterval={4000}/>*/}
       <ContactForm/>
       <OurServices/>
       <ExplorepPlans/>
