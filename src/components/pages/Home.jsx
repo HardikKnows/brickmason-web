@@ -8,6 +8,7 @@ import Projects from "../hero/Projects.jsx";
 import ProjectDetails from './ProjectDetails.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ContactForm from "../common/ContactForm.jsx";
+import MeetOurTeam from "../hero/MeetOurTeam.jsx";
 
 
 
@@ -64,7 +65,7 @@ function Home() {
       <Promotional/>
       <Projects />
       <WhyUs/>
-     
+     <MeetOurTeam/>
 
     {/*<ProjectsSection projects={projectData} />*/}
       <Footer/>

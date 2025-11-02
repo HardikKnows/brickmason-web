@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 function Footer () {
     return <section className=" py-[60px] md:py-[100px] bg-[#232427] border-b-[1px] border-solid border-[#333]">
@@ -15,14 +16,14 @@ function Footer () {
                 <div className="widget-content">
                     <h4 className="text-[#fff] poppins">Site Map</h4>
                     <ul className="widget-links text-[#8d9aa8] leading-[2rem] source-sans text-[12px] md:text-[16px] pl-0">
-                        <li><a className="no-underline text-[#8d9aa8]"    href="/how-it-works.html">How it Works</a></li>
-                        <li><a className="no-underline text-[#8d9aa8]"    href="/projects.html">Our Projects</a></li>
-                        <li><a className="no-underline text-[#8d9aa8]"    href="/cost-estimator.html">Cost Estimator</a></li>
-                        <li><a className="no-underline text-[#8d9aa8]"    href="/material-est.html">Material Estimator</a></li>
-                        <li><a className="no-underline text-[#8d9aa8]"    href="/floor-plan.html">Floor Plans</a></li>
-                        <li><a className="no-underline text-[#8d9aa8]"    href="/about-us.html">About Us</a></li>
-                        <li><a className="no-underline text-[#8d9aa8]"    href="/contact.html">Contact Us</a></li>
-                        <li><a className="no-underline text-[#8d9aa8]"    href="/testimonial.html">Reviews</a></li>
+                        <li><a className="no-underline text-[#8d9aa8]"    href="#how-it-works">How it Works</a></li>
+                        <li><a className="no-underline text-[#8d9aa8]"    href="#our-projects">Our Projects</a></li>
+                        <li><Link to="/cost-estimator" className="no-underline text-[#8d9aa8]">Cost Estimator</Link></li>
+                        <li><Link to="/floor-plans" className="no-underline text-[#8d9aa8]">Floor Plans</Link></li>
+                        <li><Link to="/about" className="no-underline text-[#8d9aa8]">About Us</Link></li>
+                        <li><Link to="/contact" className="no-underline text-[#8d9aa8]">Contact Us</Link></li>
+                        
+                        <li><a className="no-underline text-[#8d9aa8]"    href="#Reviews">Reviews</a></li>
                     </ul>
                 </div>
             </div>
@@ -30,10 +31,10 @@ function Footer () {
                 <div className="widget-content">
                     <h4 className="text-[#fff] poppins">Information</h4>
                     <ul className="widget-links source-sans text-[12px] md:text-[16px]  pl-0">
-                        <li><a className="no-underline text-[#8d9aa8]"    href="/tnc.html">Terms &amp; Conditions</a></li>
-                        <li><a className="no-underline text-[#8d9aa8]"    href="/privacy.html">Privacy Policy</a></li>
-                        <li><a className="no-underline text-[#8d9aa8]"    href="/faqs.html">FAQs</a></li>
-                        <li><a className="no-underline text-[#8d9aa8]"    href="/cancellation.html">Cancellation Policy</a></li>
+                    <li><Link to="/terms-and-conditions" className="no-underline text-[#8d9aa8]">Terms & Conditions</Link></li>
+                    <li><Link to="/privacy-policy" className="no-underline text-[#8d9aa8]">Privacy Policy</Link></li>
+                    <li><Link to="/faqs" className="no-underline text-[#8d9aa8]">FAQs</Link></li>
+                    <li><Link to="/cancellation-policy" className="no-underline text-[#8d9aa8]">Cancellation Policy</Link></li>
                     </ul>
 
 

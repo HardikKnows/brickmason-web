@@ -7,6 +7,7 @@ module.exports = {
         custom: ['custom-font', 'sans-serif',],
         poppins: ["Poppins", "sans-serif"],
         workSans: ['"Work Sans"'],
+        dmserif: ['DM Serif Display', 'serif'],
       },
       fontSize: {
         xl: '1.25rem',

@@ -14,14 +14,12 @@ const HeaderWindow = () => {
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const navLinks = [
     { label: "Our Projects", href: "#our-projects" },
-    { label: "Cost Estimator", to: "/UnderCons" },
+    { label: "Cost Estimator", to: "/cost-estimator" },
     { label: "How it Works", href: "#how-it-works" },
     { label: "Our Services", href: "#our-services" },
   ];
@@ -38,8 +36,18 @@ const HeaderWindow = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between space-x-6 overflow-x-auto">
-
+      <div
+        className="
+          w-full
+          md:px-2 
+          lg:px-6 
+          py-4 
+          flex items-center justify-between 
+          md:space-x-3 lg:space-x-6 
+          md:max-w-none lg:max-w-7xl 
+          md:mx-0 lg:mx-auto
+        "
+      >
         {/* Left: Logo */}
         <div className="flex-shrink-0">
           <a href="/">
@@ -47,14 +55,28 @@ const HeaderWindow = () => {
           </a>
         </div>
 
-        {/* Center: Nav Links */}
-        <nav className="hidden md:flex flex-grow justify-center space-x-4 lg:space-x-8 text-[15px] tracking-wide overflow-x-auto whitespace-nowrap">
+        {/* Center: Nav */}
+        <nav
+          className="
+            hidden md:flex flex-grow items-center 
+            space-x-4 lg:space-x-8 
+            text-[15px] tracking-wide font-medium
+            overflow-x-auto overflow-y-hidden 
+            whitespace-nowrap 
+            scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent
+            no-scrollbar
+          "
+          style={{
+            WebkitOverflowScrolling: "touch",
+            scrollbarWidth: "thin",
+          }}
+        >
           {navLinks.map((item) =>
             item.to ? (
               <Link
                 key={item.label}
                 to={item.to}
-                className="text-gray-800 font-medium hover:text-[#D2042D] transition no-underline"
+                className="text-gray-800 hover:text-[#D2042D] transition no-underline flex-shrink-0"
               >
                 {item.label}
               </Link>
@@ -62,7 +84,7 @@ const HeaderWindow = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-800 font-medium hover:text-[#D2042D] transition no-underline"
+                className="text-gray-800 hover:text-[#D2042D] transition no-underline flex-shrink-0"
               >
                 {item.label}
               </a>
@@ -70,26 +92,29 @@ const HeaderWindow = () => {
           )}
 
           {/* Dropdown */}
-          <div className="relative" ref={dropdownRef}>
+          <div className="relative flex-shrink-0" ref={dropdownRef}>
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
               className="text-gray-800 font-medium hover:text-[#D2042D] focus:outline-none transition"
             >
               More ▾
             </button>
+
             {dropdownOpen && (
-              <ul className="absolute z-50 mt-2 w-56 bg-white shadow-xl rounded-lg py-2 border border-gray-100">
-                {dropdownItems.map((item) => (
-                  <li key={item.to}>
-                    <Link
-                      to={item.to}
-                      className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#D2042D] transition no-underline"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <div className="absolute right-0 mt-3 w-56 bg-white rounded-2xl shadow-xl border border-gray-200 z-[9999] animate-fadeIn">
+                <ul className="py-2">
+                  {dropdownItems.map((item, index) => (
+                    <li key={`${item.to}-${index}`}>
+                      <Link
+                        to={item.to}
+                        className="block px-5 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#D2042D] transition no-underline rounded-lg"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             )}
           </div>
         </nav>
@@ -103,26 +128,17 @@ const HeaderWindow = () => {
             Let's Build
           </Link>
           <div className="h-10 w-px bg-gray-300"></div>
-          <div className="flex flex-col space-y-1 text-sm text-gray-800 whitespace-nowrap">
-            <a
-              href="tel:+918874778585"
-              className="flex items-center hover:text-[#D2042D] transition"
-            >
-              <PhoneIcon className="h-4 w-4 mr-1 text-[#D2042D]" />
-              +91 88747 78585
-            </a>
-          </div>
-        </div>
-
-        {/* Mobile Contacts */}
-        <div className="flex flex-col space-y-1 text-[10px] text-gray-800 md:hidden items-end leading-tight">
           <a
-            href="tel:+918874778585"
-            className="flex items-center hover:text-[#D2042D] transition"
+            href="tel:+918400400048"
+            className="flex items-center text-sm text-gray-800 hover:text-[#D2042D] transition"
           >
             <PhoneIcon className="h-4 w-4 mr-1 text-[#D2042D]" />
-            +91 88747 78585
+            +91 8400400048
           </a>
+        </div>
+
+        {/* Mobile */}
+        <div className="flex flex-col space-y-1 text-[10px] text-gray-800 md:hidden items-end leading-tight">
           <a
             href="tel:+918400400048"
             className="flex items-center hover:text-[#D2042D] transition"
