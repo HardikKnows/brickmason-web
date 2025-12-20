@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 
 const teamMembers = [
   {
-    name: "Aarav Sharma",
-    role: "Founder & CEO",
+    name: "Pranjal Shukla",
+    role: "Founder and CEO",
     img: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?auto=format&fit=crop&w=400&q=80",
   },
   {
-    name: "Riya Mehta",
-    role: "Head of Design",
+    name: "Shobhit Shrivastva",
+    role: "Founder and CEO",
     img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80",
   },
   {
-    name: "Aditya Verma",
+    name: "lorem ipsum",
     role: "Project Manager",
     img: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80",
   },
   {
-    name: "Neha Kapoor",
+    name: "lorem ipsum",
     role: "Marketing Lead",
     img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80",
   },
