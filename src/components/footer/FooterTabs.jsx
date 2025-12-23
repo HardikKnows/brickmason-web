@@ -87,7 +87,7 @@ function FooterTabs() {
                 { name: "About Us", to: "/about" },
                 { name: "Contact Us", to: "/contact" },
                 { name: "Reviews", to: "/#Reviews" },
-                { name: "Our Team", to: "/team" },
+                { name: "Our Team", to: "/#team" },
               ].map((item) => (
                 <MenuItem key={item.name}>
                   {() => (
