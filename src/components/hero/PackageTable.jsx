@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'; // ✅ Required for animation
 const packages = {
   structure: {
     name: "Structure",
-    price: "₹1,100/sq.ft",
+    price: "₹1,149/sq.ft",
     features: {
       designAndDrawings: {
         ArchitecturalLayout: "2D Architectural Layout",
@@ -55,7 +55,7 @@ const packages = {
   },
   structure2: {
     name: "Structure",
-    price: "₹1,200/sq.ft",
+    price: "₹1,249/sq.ft",
     features: {
       designAndDrawings: {
         ArchitecturalLayout: "2D Architectural Layout",
@@ -110,7 +110,7 @@ const packages = {
   },
   budget: {
     name: "Budget",
-    price: "₹1,599/sq.ft",
+    price: "₹1,649/sq.ft",
     features: {
       designAndDrawings: {
         ArchitecturalLayout: "2D Architectural Layout",
@@ -169,7 +169,7 @@ const packages = {
   },
   classic: {
     name: "Classic",
-    price: "₹1,799/sq.ft",
+    price: "₹1,849/sq.ft",
     features: {
       designAndDrawings: {
         ArchitecturalLayout: "2D Architectural Layout",
@@ -231,7 +231,7 @@ const packages = {
   },
   premium: {
     name: "Premium",
-    price: "₹1,999/sq.ft",
+    price: "₹2049/sq.ft",
     features: {
       designAndDrawings: {
         ArchitecturalLayout: "2D Architectural Layout",

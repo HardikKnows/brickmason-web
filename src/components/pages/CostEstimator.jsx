@@ -27,7 +27,7 @@ export default function CostEstimator() {
         animate={{ opacity: 1, y: 0 }}
         className="text-5xl font-extrabold mb-10 text-gray-800 text-center"
       >
-        🧱 BrickMason <span className="text-indigo-600">Cost Estimator</span>
+      <span className="text-indigo-600">Cost Estimator</span>
       </motion.h1>
 
       <motion.div
@@ -74,11 +74,11 @@ export default function CostEstimator() {
               className="w-full border border-gray-300 rounded-lg p-3 text-gray-800 shadow-sm focus:ring-2 focus:ring-indigo-500 outline-none"
             >
               <option value="">Select Package</option>
-              <option value="1100">Budget - ₹1100/sqft</option>
-              <option value="1200">Classic - ₹1200/sqft</option>
-              <option value="1600">Premium - ₹1600/sqft</option>
-              <option value="1800">Luxury - ₹1800/sqft</option>
-              <option value="2000">Elite - ₹2000/sqft</option>
+              <option value="1149">Budget - ₹1149/sqft</option>
+              <option value="1249">Classic - ₹1249/sqft</option>
+              <option value="1649">Premium - ₹1649/sqft</option>
+              <option value="1849">Luxury - ₹1849/sqft</option>
+              <option value="2049">Elite - ₹2049/sqft</option>
             </select>
           </div>
 

@@ -40,13 +40,12 @@ const HeaderWindow = () => {
   ];
 
   const dropdownItems = [
-    { label: "Material Estimator", to: "/UnderCons" },
     { label: "Floor Plans", to: "/UnderCons" },
-    { label: "FAQs", to: "/UnderCons" },
-    { label: "About Us", to: "/UnderCons" },
+    { label: "FAQs", to: "/faqs" },
+    { label: "About Us", to: "/about" },
     { label: "Contact Us", to: "/contact" },
-    { label: "Reviews", to: "/UnderCons" },
-    { label: "Our Team", to: "/UnderCons" },
+    { label: "Reviews", to: "/#Reviews" },
+    { label: "Our Team", to: "/team" },
   ];
 
   return (
@@ -65,7 +64,7 @@ const HeaderWindow = () => {
       >
         {/* Logo */}
         <div className="flex-shrink-0 lg:mr-2">
-          <a href="/">
+          <a href="/#top">
             <img src={logo} alt="Brick Mason Logo" className="h-12" />
           </a>
         </div>
