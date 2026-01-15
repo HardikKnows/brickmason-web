@@ -1,0 +1,17 @@
+{
+    "routes": [
+      {
+        "route": "/*",
+        "allowedRoles": []
+      }
+    ],
+    "responseOverrides": {
+      "401": {
+        "rewrite": "/403.html"
+      },
+      "403": {
+        "rewrite": "/403.html"
+      }
+    }
+  }
+  
