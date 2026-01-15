@@ -36,38 +36,20 @@ function Home() {
     }, 150);
   }, [location]);
 
-  return (
-    <div id="top">
-      <Banner />
-
-      <ContactForm />
-
-      {/* OUR SERVICES */}
-      <section id="our-services">
-        <OurServices />
-      </section>
-
-      <ExplorepPlans />
-
-      {/* HOW IT WORKS */}
-      <section id="how-it-works">
-        <HowItWorks />
-      </section>
-
-      <Promotional />
-
-      {/* PROJECTS */}
-      <section id="our-projects">
-        <Projects />
-      </section>
-
-      <WhyUs />
-
-      <MeetOurTeam />
-
-      <Footer />
+  return <div style={{
+    height: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontFamily: "Arial",
+    textAlign: "center"
+  }}>
+    <div>
+      <h1>Service Temporarily Unavailable</h1>
+      <p>This service has been paused due to administrative reasons.</p>
+      <p>Please contact the administrator.</p>
     </div>
-  );
+  </div>
 }
 
 export default Home;
